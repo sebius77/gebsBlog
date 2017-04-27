@@ -5,12 +5,18 @@ namespace Core\Database;
 use \PDO;
 
 
+/**
+ * Class MysqlDatabase
+ * @package Core\Database
+ */
 class MysqlDatabase extends Database {
 
    private $pdo;
 
 
-
+    /**
+     * @return PDO
+     */
     private function getPDO() {
         if($this->pdo === null) {
 
@@ -25,6 +31,13 @@ class MysqlDatabase extends Database {
         return $this->pdo;
     }
 
+
+    /**
+     * @param $statement
+     * @param null $class
+     * @param bool $one
+     * @return array|mixed
+     */
     public function query($statement, $class = null, $one = false) {
         $req = $this->getPDO()->query($statement);
         if($class === null) {
@@ -40,6 +53,13 @@ class MysqlDatabase extends Database {
         return $data;
     }
 
+    /**
+     * @param $statement
+     * @param $attributes
+     * @param null $class
+     * @param bool $one
+     * @return array|mixed
+     */
     public function prepare($statement, $attributes, $class = null, $one = false) {
         $req = $this->getPDO()->prepare($statement);
         $req->execute($attributes);

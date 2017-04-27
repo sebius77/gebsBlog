@@ -3,7 +3,10 @@
 
 namespace Core\Database;
 
-
+/**
+ * Class Database
+ * @package Core\Database
+ */
 class Database {
 
     protected $db_name;
@@ -11,7 +14,13 @@ class Database {
     protected $db_pass;
     protected $db_host;
 
-
+    /**
+     * Database constructor.
+     * @param $dbName
+     * @param $dbHost
+     * @param $dbUser
+     * @param $dbPass
+     */
     public function __construct($dbName,$dbHost,$dbUser,$dbPass)
     {
         $this->db_name = $dbName;

@@ -1,7 +1,6 @@
 <?php
 
 
-
 use Core\Database\MysqlDatabase;
 use Core\Config;
 
@@ -10,7 +9,10 @@ class App {
     private static $db_instance;
     private static $_instance;
 
-
+    /**
+     * Initialise l'instance de l'objet App
+     * @return App
+     */
     public static function getInstance() {
         if(self::$_instance === null) {
             self::$_instance = new App();
@@ -18,7 +20,10 @@ class App {
         return self::$_instance;
     }
 
-
+    /**
+     * Initialise la connexion à la base de données.
+     * @return MysqlDatabase
+     */
     public static function getDb() {
         $config = Config::getInstance(ROOT . '/config/config.php');
 
@@ -28,7 +33,11 @@ class App {
         return self::$db_instance;
     }
 
-
+    /**
+     * Charge les classes Autoloader
+     * pour l'automatisation du chargement des classes
+     * dans app/ et core/
+     */
     public static function load() {
         session_start();
         require 'Autoloader.php';
