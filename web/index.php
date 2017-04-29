@@ -17,18 +17,18 @@ if (isset($_GET['page'])) {
 ob_start();
 
 if ($page === 'accueil') {
-    require '../views/accueil.php';
+    require '../views/front/accueil.php';
 } elseif ($page === 'livre') {
-    require '../views/livre.php';
+    require '../views/front/livre.php';
 } elseif ($page === 'aPropos') {
-    require '../views/aPropos.php';
+    require '../views/front/aPropos.php';
 } elseif ($page === 'episode') {
-    require '../views/episode.php';
+    require '../views/front/episode.php';
 } elseif($page === 'login') {
     require '../views/users/login.php';
 }
 
 $content = ob_get_clean();
 
-require '../views/layout.php';
+require '../views/templates/layout.php';
 

@@ -40,7 +40,12 @@ class Form {
 
 
     protected function getValue($index) {
-        return isset($this->data[$index]) ? $this->data[$index] : null;
+        if(is_object($this->data)){
+            return $this->data->$index;
+        }
+            return isset($this->data[$index]) ? $this->data[$index] : null;
+
+
     }
 
 
@@ -50,7 +55,8 @@ class Form {
         $type = isset($options['type']) ? $options[$type] : 'text';
 
         return $this->surround(
-            '<label>' . $name . '</label><input type="' . $type . '" name="' . $name . '" value="' . $this->getValue($name) .'"');
+            '<label>' . $name . '</label><input type="' . $type . '" name="' . $name .
+            '" value="' . $this->getValue($name) .'"');
 
 
     }

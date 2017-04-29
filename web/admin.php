@@ -9,7 +9,7 @@ App::load();
 if (isset($_GET['page'])) {
     $page = $_GET['page'];
 } else {
-    $page = 'accueil';
+    $page = 'admin';
 }
 
 
@@ -35,6 +35,8 @@ if ($page === 'accueil') {
     require '../views/admin/episode.php';
 } elseif ($page === 'admin') {
     require '../views/admin/admin.php';
+} elseif ($page === 'episode.edit') {
+    require '../views/admin/edit.php';
 }
 
 $content = ob_get_clean();

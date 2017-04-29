@@ -3,23 +3,28 @@
 
 namespace App\Table;
 
+use Core\Table\Table;
+
 /**
  * Class Episode
  * @package App\Table
  */
 class Episode extends Table {
 
-    protected  $id;
-    protected $titre;
-    protected  $contenu;
-    protected $date;
+    protected static $table = 'episode';
 
     /**
      * Récupère la liste des épisodes dans l'ordre ascendant
      * @return array|mixed
      */
     public static function getLast() {
-        return \App::getDb()->query('SELECT * FROM episode ORDER BY date DESC', __CLASS__);
+        return self::query('SELECT * FROM episode ORDER BY date DESC');
+    }
+
+
+
+    public static function getThreeLast() {
+        return self::query('SELECT * FROM episode ORDER BY date DESC LIMIT 3');
     }
 
     /**
@@ -41,23 +46,6 @@ class Episode extends Table {
         return $html;
     }
 
-
-    public function getId() {
-        return $this->id;
-    }
-
-
-    public function getTitre() {
-        return $this->titre;
-    }
-
-    public function getContenu() {
-        return $this->contenu;
-}
-
-    public function getDate() {
-        return $this->date;
-    }
 
 }
 

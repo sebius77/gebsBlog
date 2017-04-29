@@ -1,6 +1,7 @@
 <?php
 
-$episodes = App::getDb()->query('SELECT id,titre,date FROM episode ORDER BY date DESC LIMIT 5', 'App\Table\Episode');
+//$episodes = App::getDb()->query('SELECT id,titre,date FROM episode ORDER BY date DESC LIMIT 5', 'App\Table\Episode');
+$episodes = App\Table\Episode::getThreeLast();
 
 ?>
 

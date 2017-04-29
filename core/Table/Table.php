@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App\Table;
+namespace Core\Table;
 
 use App;
 
@@ -23,44 +23,38 @@ abstract class Table {
         return $this->$key;
     }
 
-    /**
-     * récupère le nom de la table
-     * @return mixed
-     */
-    protected static function getTable() {
-        if(static::$table === null) {
-            $class_name = explode('\\', get_called_class());
-            $class_name = end($class_name);
-
-            static::$table = strtolower($class_name);
-
-        }
-
-        return static::$table;
-    }
 
     /**
      * récupère les éléments de la table
      * @return array|mixed
      */
     public static function all() {
-        return App::getDb()->query("SELECT * FROM " . static::getTable() . "", get_called_class());
+        return self::query("SELECT * FROM " . static::$table . "");
 
     }
 
     /**
      * @param $id
      */
-    public function find($id) {
-
+    public static function find($id) {
+        return self::query(
+            "SELECT * FROM " . static::$table . "
+            WHERE id = ?
+            ", [$id], true);
     }
 
     /**
      * @param $statement
      * @param null $attributes
      * @param bool $one
+     * @return
      */
     public function query($statement, $attributes = null, $one = false) {
+        if($attributes) {
+            return App::getDb()->prepare($statement,$attributes,get_called_class(), $one);
+        } else {
+            return App::getDb()->query($statement, get_called_class(), $one);
+        }
 
     }
 

@@ -9,7 +9,11 @@
 
     <!-- Les styles -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../web/css/style.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <script type="text/javascript" src="lib/tinymce/tinymce.min.js"></script>
+    <script type="text/javascript">tinymce.init({ selector: 'textarea', menubar: false});</script>
+
 </head>
 
 <body>

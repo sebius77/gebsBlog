@@ -5,7 +5,7 @@ $lastEpisodes = App\Table\Episode::getLast();
 
 ?>
 
-<h2>Liste des épisodes</h2>
+    <h2>Liste des épisodes</h2>
 <p>
     <?php foreach($allEpisode as $chapt) : ?>
 

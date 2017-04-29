@@ -22,7 +22,7 @@ $episodes = App\Table\Episode::all();
             <td><?= $episode->id; ?></td>
             <td><?= $episode->titre ?></td>
             <td>
-                <a class="btn btn-primary" href="?episode.edit&id=<?= $episode->id; ?>">Editer</a>
+                <a class="btn btn-primary" href="?page=episode.edit&id=<?= $episode->id; ?>">Editer</a>
             </td>
         </tr>
     <?php endforeach; ?>

@@ -28,7 +28,8 @@ class App {
         $config = Config::getInstance(ROOT . '/config/config.php');
 
         if (self::$db_instance === null) {
-            self::$db_instance = new MysqlDatabase($config->get('db_name'), $config->get('db_host'), $config->get('db_user'), $config->get('db_pass'));
+            self::$db_instance = new MysqlDatabase($config->get('db_name'), $config->get('db_host'),
+                $config->get('db_user'), $config->get('db_pass'));
         }
         return self::$db_instance;
     }
