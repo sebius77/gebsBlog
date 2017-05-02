@@ -2,31 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6217d9d2-e658-455d-8414-37cc5e9c9f5a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/admin/add.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/admin/delete.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/Entity/commentaireEntity.php" afterPath="$PROJECT_DIR$/app/Entity/CommentaireEntity.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/Entity/episodeEntity.php" afterPath="$PROJECT_DIR$/app/Entity/EpisodeEntity.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/App.php" afterPath="$PROJECT_DIR$/app/App.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Autoloader.php" afterPath="$PROJECT_DIR$/app/Autoloader.php" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bdd/blog.sql" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Table/CommentaireTable.php" afterPath="$PROJECT_DIR$/app/Table/CommentaireTable.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Table/EpisodeTable.php" afterPath="$PROJECT_DIR$/app/Table/EpisodeTable.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/config.php" afterPath="$PROJECT_DIR$/config/config.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/Autoloader.php" afterPath="$PROJECT_DIR$/core/Autoloader.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/Database/MysqlDatabase.php" afterPath="$PROJECT_DIR$/core/Database/MysqlDatabase.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/Entity/Entity.php" afterPath="$PROJECT_DIR$/core/Entity/Entity.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/Table/Table.php" afterPath="$PROJECT_DIR$/core/Table/Table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/admin/accueil.php" afterPath="$PROJECT_DIR$/views/admin/accueil.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/admin/admin.php" afterPath="$PROJECT_DIR$/views/admin/admin.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/admin/edit.php" afterPath="$PROJECT_DIR$/views/admin/edit.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/admin/episode.php" afterPath="$PROJECT_DIR$/views/admin/episode.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/admin/layout.php" afterPath="$PROJECT_DIR$/views/admin/layout.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/admin/livre.php" afterPath="$PROJECT_DIR$/views/admin/livre.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/front/accueil.php" afterPath="$PROJECT_DIR$/views/front/accueil.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/front/episode.php" afterPath="$PROJECT_DIR$/views/front/episode.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/front/livre.php" afterPath="$PROJECT_DIR$/views/front/livre.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/users/login.php" afterPath="$PROJECT_DIR$/views/users/login.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/admin.php" afterPath="$PROJECT_DIR$/web/admin.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -48,55 +26,27 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CommentaireTable.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CommentaireTable.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Table/CommentaireTable.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="500">
-              <caret line="26" column="4" lean-forward="false" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
+            <state relative-caret-position="780">
+              <caret line="40" column="1" lean-forward="true" selection-start-line="40" selection-start-column="1" selection-end-line="40" selection-end-column="1" />
               <folding>
-                <marker date="1493737127917" expanded="true" signature="361:406" ph="SELECT * FRO... commentaire" />
+                <marker date="1493740133788" expanded="true" signature="361:406" ph="SELECT * FRO... commentaire" />
+                <marker date="1493740133788" expanded="true" signature="708:736" ph="INSERT INTO episode... " />
+                <marker date="1493740133788" expanded="true" signature="708:746" ph="INSERT INTO episode... " />
+                <marker date="1493740133788" expanded="true" signature="708:758" ph="INSERT INTO commentaire... " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/admin.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="860">
-              <caret line="43" column="26" lean-forward="true" selection-start-line="43" selection-start-column="26" selection-end-line="43" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="episode.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="episode.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/front/episode.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-              <folding>
-                <marker date="1493736594187" expanded="true" signature="307:342" ph="..." />
-                <marker date="1493736594187" expanded="true" signature="437:503" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EpisodeTable.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Table/EpisodeTable.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="621">
-              <caret line="79" column="5" lean-forward="true" selection-start-line="67" selection-start-column="3" selection-end-line="79" selection-end-column="5" />
-              <folding>
-                <marker date="1493734036915" expanded="true" signature="324:364" ph="SELECT * FRO... episode" />
-                <marker date="1493734036915" expanded="true" signature="556:604" ph="SELECT * FRO... episode" />
-                <marker date="1493734036915" expanded="true" signature="814:860" ph="SELECT * FRO... ${$this-&gt;table}" />
-                <marker date="1493734036915" expanded="true" signature="1361:1404" ph="UPDATE ${{$t... " />
-                <marker date="1493734036915" expanded="true" signature="1734:1757" ph="UPDATE episo... " />
-                <marker date="1493734036915" expanded="true" signature="1848:1880" ph="DELETE FROM " />
-                <marker date="1493734036915" expanded="true" signature="1961:1982" ph="SELECT * FRO... episode" />
-              </folding>
+            <state relative-caret-position="280">
+              <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -168,8 +118,8 @@
         <option value="$PROJECT_DIR$/views/admin/delete.php" />
         <option value="$PROJECT_DIR$/core/Table/Table.php" />
         <option value="$PROJECT_DIR$/app/Table/EpisodeTable.php" />
-        <option value="$PROJECT_DIR$/views/front/episode.php" />
         <option value="$PROJECT_DIR$/app/Table/CommentaireTable.php" />
+        <option value="$PROJECT_DIR$/views/front/episode.php" />
       </list>
     </option>
   </component>
@@ -211,6 +161,52 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="gebsBlog" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gebsBlog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gebsBlog" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gebsBlog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gebsBlog" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="front" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gebsBlog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gebsBlog" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bdd" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -393,12 +389,12 @@
       <workItem from="1493644507483" duration="5949000" />
       <workItem from="1493666655138" duration="2181000" />
       <workItem from="1493713698115" duration="241000" />
-      <workItem from="1493713939718" duration="19614000" />
+      <workItem from="1493713939718" duration="22945000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="140358000" />
+    <option name="totallyTimeSpent" value="143689000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="27" width="1922" height="1174" extended-state="6" />
@@ -739,24 +735,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/admin/admin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="580">
-          <caret line="29" column="8" lean-forward="true" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
-          <folding>
-            <element signature="n#style#0;n#form#0;n#td#2;n#tr#0;n#tbody#0;n#table#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/admin/add.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/admin/delete.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -791,14 +769,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/admin/edit.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="30" column="7" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="30" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="40">
@@ -807,21 +777,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/front/episode.php">
+    <entry file="file://$PROJECT_DIR$/views/admin/add.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding>
-            <marker date="1493736594187" expanded="true" signature="307:342" ph="..." />
-            <marker date="1493736594187" expanded="true" signature="437:503" ph="..." />
-          </folding>
+        <state relative-caret-position="240">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/admin/edit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="620">
+          <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/admin/admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="21" column="80" lean-forward="true" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="80" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Table/EpisodeTable.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="621">
-          <caret line="79" column="5" lean-forward="true" selection-start-line="67" selection-start-column="3" selection-end-line="79" selection-end-column="5" />
+        <state relative-caret-position="370">
+          <caret line="65" column="0" lean-forward="true" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
           <folding>
             <marker date="1493734036915" expanded="true" signature="324:364" ph="SELECT * FRO... episode" />
             <marker date="1493734036915" expanded="true" signature="556:604" ph="SELECT * FRO... episode" />
@@ -836,11 +819,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Table/CommentaireTable.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="26" column="4" lean-forward="false" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
+        <state relative-caret-position="780">
+          <caret line="40" column="1" lean-forward="true" selection-start-line="40" selection-start-column="1" selection-end-line="40" selection-end-column="1" />
           <folding>
-            <marker date="1493737127917" expanded="true" signature="361:406" ph="SELECT * FRO... commentaire" />
+            <marker date="1493740133788" expanded="true" signature="361:406" ph="SELECT * FRO... commentaire" />
+            <marker date="1493740133788" expanded="true" signature="708:736" ph="INSERT INTO episode... " />
+            <marker date="1493740133788" expanded="true" signature="708:746" ph="INSERT INTO episode... " />
+            <marker date="1493740133788" expanded="true" signature="708:758" ph="INSERT INTO commentaire... " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/front/episode.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
