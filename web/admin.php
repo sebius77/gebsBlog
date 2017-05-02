@@ -21,8 +21,6 @@ if(!$auth->logged()) {
     $app->forbidden();
 }
 
-
-
 ob_start();
 
 if ($page === 'accueil') {
@@ -37,6 +35,10 @@ if ($page === 'accueil') {
     require '../views/admin/admin.php';
 } elseif ($page === 'episode.edit') {
     require '../views/admin/edit.php';
+} elseif ($page === 'episode.add') {
+    require '../views/admin/add.php';
+} elseif ($page === 'episode.delete') {
+    require '../views/admin/delete.php';
 }
 
 $content = ob_get_clean();

@@ -1,6 +1,5 @@
 <?php
 
-
 namespace Core\Table;
 
 use Core\Database\Database;
@@ -13,7 +12,6 @@ abstract class Table {
 
     protected $table;
     protected $db;
-
 
     public function __construct(Database $database)
     {
@@ -44,17 +42,15 @@ abstract class Table {
             return $this->db->query(
                 $statement,
                 str_replace('Table', 'Entity', get_class($this)),
-                    $one);
+                $one);
         }
     }
-
-
 
     /**
      * @param $id
      */
     public function find($id) {
-        return $this->db->query(
+        return $this->query(
             "SELECT * FROM " . $this->table . "
             WHERE id = ?
             ", [$id], true);
@@ -62,25 +58,6 @@ abstract class Table {
 
 
 
-    /**
-     * @param $id
-     * @param $fields
-     * @return array|mixed
-     */
-    public function update($id, $fields) {
-        $sql_parts = [];
-        $attributes = [];
-        die(var_dump($fields));
-        foreach ($fields as $k => $v) {
-            $sql_parts = "$k = ?";
-            $attributes = $v;
-        }
-        $attributes[] = $id;
-
-        $sql_parts = implode(',', $sql_parts);
-        die();
-        return $this->query("UPDATE {$this->table} SET name = $sql_parts WHERE id = ?",$attributes, true);
-    }
 
 
 }

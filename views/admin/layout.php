@@ -42,6 +42,10 @@
                 <li><a href="admin.php?page=livre"><span class="glyphicon glyphicon-book"></span> LE LIVRE</a></li>
                 <li><a href="admin.php?page=aPropos"><span class="glyphicon glyphicon-info-sign"></span> A PROPOS</a></li>
             </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="admin.php?page=admin"><span class="glyphicon glyphicon-cog pull-right">Administration</a></li>
+                <li><a href="admin.php?page=login"><span class="glyphicon glyphicon-log-out pull-right"></a></li>
+            </ul>
         </div>
     </div>
 </nav>

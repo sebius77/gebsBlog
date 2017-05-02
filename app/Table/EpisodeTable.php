@@ -31,6 +31,61 @@ class EpisodeTable extends Table {
     }
 
 
+    /**
+     * Permet de récupérer un épisode en fonction de son identifiant
+     * @param $id
+     * @return mixed
+     */
+    public function find($id) {
+        return $this->query(
+            "SELECT * FROM episode
+            WHERE id = ?
+            ", [$id], true);
+    }
+
+        /**
+         * @param $id
+         * @param $fields
+         * @return array|mixed
+         */
+        public function update($id, $fields) {
+            $sql_parts = [];
+            $attributes = [];
+
+            foreach ($fields as $k => $v) {
+                $sql_parts[] = "$k = ?";
+                $attributes[] = $v;
+            }
+
+            $attributes[] = $id;
+            $sql_parts = implode(",", $sql_parts);
+
+            return $this->query("UPDATE  episode SET $sql_parts WHERE id = ?",$attributes, true);
+        }
+
+
+
+    public function add($fields) {
+        $sql_parts = [];
+        $attributes = [];
+
+        foreach ($fields as $k => $v) {
+            $sql_parts[] = "$k = ?";
+            $attributes[] = $v;
+        }
+
+        $sql_parts = implode(",", $sql_parts);
+
+        return $this->query("INSERT INTO episode SET $sql_parts",$attributes,true);
+    }
+
+    public function delete($id) {
+        return $this->query("DELETE FROM episode WHERE id = ?", [$id], true);
+    }
+
+    public function all() {
+        return $this->query("SELECT * FROM episode");
+    }
 
 }
 

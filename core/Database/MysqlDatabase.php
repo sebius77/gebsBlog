@@ -15,6 +15,7 @@ class MysqlDatabase extends Database {
 
 
     /**
+     * Cette méthode instancie l'objet PDO
      * @return PDO
      */
     private function getPDO() {
@@ -67,6 +68,7 @@ class MysqlDatabase extends Database {
         if (strpos($statement, 'UPDATE') === 0 ||
             strpos($statement,'INSERT') === 0 ||
             strpos($statement, 'DELETE') === 0 ){
+
             return $res;
         }
 
@@ -83,7 +85,5 @@ class MysqlDatabase extends Database {
 
         return $data;
     }
-
-
 
 }

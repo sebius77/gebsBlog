@@ -14,7 +14,7 @@
 
 
 
-                    <p></p><a href="<?= $item->getUrl(); ?>"<?= $item->id; ?>><?= $item->titre; ?></a></p>
+                    <p></p><a href="<?= $item->url; ?>"<?= $item->id; ?>><?= $item->titre; ?></a></p>
                 <?php endforeach; ?>
             </ul>
 

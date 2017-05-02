@@ -1,6 +1,5 @@
 <?php
 
-
 use Core\Database\MysqlDatabase;
 use Core\Config;
 
@@ -20,13 +19,16 @@ class App {
         return self::$_instance;
     }
 
-
+    /**
+     * Permet d'instancier la classe avec le nom donné
+     * en injectant la connexion à la base de données
+     * @param $name
+     * @return mixed
+     */
     public function getTable($name) {
         $class_name = '\\App\\Table\\' . ucfirst($name) . 'Table';
         return new $class_name($this->getDb());
-
     }
-
 
     /**
      * Initialise la connexion à la base de données.

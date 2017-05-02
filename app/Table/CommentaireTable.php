@@ -15,9 +15,15 @@ class CommentaireTable extends Table{
     protected $table;
 
 
+    /**
+     * Permet de récupérer tous les commentaires d'un épisode
+     * @param $id
+     * @return mixed
+     */
     public function getLastById($id) {
         return $this->query('SELECT * FROM commentaire WHERE idEpisode = ?',[$id]);
     }
 
+    
 
 }

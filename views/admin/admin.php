@@ -1,12 +1,7 @@
-<?php
-
-
-
-$episodes = App\Table\Episode::all();
-
-?>
-
 <h1>Administrer les épisodes</h1>
+<p>
+    <a class="btn btn-primary" href="?page=episode.add">Ajouter</a>
+</p>
 
 <table class="table">
     <thead>
@@ -17,12 +12,17 @@ $episodes = App\Table\Episode::all();
     </tr>
     </thead>
     <tbody>
-    <?php foreach($episodes as $episode) : ?>
+        <?php foreach($app->getTable('episode')->all() as $episode) : ?>
         <tr>
             <td><?= $episode->id; ?></td>
             <td><?= $episode->titre ?></td>
             <td>
                 <a class="btn btn-primary" href="?page=episode.edit&id=<?= $episode->id; ?>">Editer</a>
+                <form action="?page=episode.delete" method="post" style="display: inline;">
+                    <input type="hidden" name="id" value="<?= $episode->id; ?>">
+                    <button type="submit" class="btn btn-danger" href="?page=episode.delete&id=<?= $episode->id; ?>">Supprimer</button>
+                </form>
+
             </td>
         </tr>
     <?php endforeach; ?>
