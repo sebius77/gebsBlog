@@ -1,10 +1,3 @@
-<?php
-
-//$episodes = App::getDb()->query('SELECT id,titre,date FROM episode ORDER BY date DESC LIMIT 5', 'App\Table\Episode');
-$episodes = App\Table\Episode::getThreeLast();
-
-?>
-
 <div class="container">
     <div class="row">
         <div class="col-lg-8">
@@ -16,10 +9,13 @@ $episodes = App\Table\Episode::getThreeLast();
         <div class="col-lg-4">
 
             <ul>
-                <?php foreach($episodes as $episode) : ?>
-                    <li><a href="<?= $episode->url; ?>"><?= $episode->titre . ' ' . $episode->date; ?></a></li>
-                <?php endforeach; ?>
 
+                <?php foreach($app->getTable('episode')->getThreeLast() as $item) : ; ?>
+
+
+
+                    <p></p><a href="<?= $item->getUrl(); ?>"<?= $item->id; ?>><?= $item->titre; ?></a></p>
+                <?php endforeach; ?>
             </ul>
 
 

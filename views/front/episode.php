@@ -1,8 +1,9 @@
 <?php
 
-$episode = \App\Table\Episode::find($_GET['id']);
-$commentaires = \App\Table\Commentaire::getLastById($_GET['id']);
-
+//$episode = \App\Table\Episode::find($_GET['id']);
+$episode = $app->getTable('episode')->find($_GET['id']);
+//$commentaires = \App\Table\Commentaire::getLastById($_GET['id']);
+//$commentaires = $app->getTable('commentaire')->getLastById($_GET['id']);
 
 ?>
 
@@ -12,9 +13,3 @@ $commentaires = \App\Table\Commentaire::getLastById($_GET['id']);
 
 <h2>Commentaires</h2>
 
-<?php foreach($commentaires as $commentaire) : ?>
-
-  <h3>  <?= $commentaire->auteur . ' ' . $commentaire->date;   ?></h3>
-    <p><?= $commentaire->contenu; ?></p>
-
-<?php endforeach; ?>

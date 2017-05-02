@@ -6,7 +6,7 @@ use Core\Config;
 
 class App {
 
-    private static $db_instance;
+    private $db_instance;
     private static $_instance;
 
     /**
@@ -20,18 +20,26 @@ class App {
         return self::$_instance;
     }
 
+
+    public function getTable($name) {
+        $class_name = '\\App\\Table\\' . ucfirst($name) . 'Table';
+        return new $class_name($this->getDb());
+
+    }
+
+
     /**
      * Initialise la connexion à la base de données.
      * @return MysqlDatabase
      */
-    public static function getDb() {
+    public function getDb() {
         $config = Config::getInstance(ROOT . '/config/config.php');
 
-        if (self::$db_instance === null) {
-            self::$db_instance = new MysqlDatabase($config->get('db_name'), $config->get('db_host'),
+        if ($this->db_instance === null) {
+            $this->db_instance = new MysqlDatabase($config->get('db_name'), $config->get('db_host'),
                 $config->get('db_user'), $config->get('db_pass'));
         }
-        return self::$db_instance;
+        return $this->db_instance;
     }
 
     /**

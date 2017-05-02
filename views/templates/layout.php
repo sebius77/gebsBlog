@@ -36,8 +36,12 @@
                 <li class="active"><a href="index.php?page=accueil"><span class="glyphicon glyphicon-home"></span> ACCUEIL</a></li>
                 <li><a href="index.php?page=livre"><span class="glyphicon glyphicon-book"></span> LE LIVRE</a></li>
                 <li><a href="index.php?page=aPropos"><span class="glyphicon glyphicon-info-sign"></span> A PROPOS</a></li>
-                <li><a href="index.php?page=login"><span></span>Connexion</a></li>
+
             </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="index.php?page=login"><span class="glyphicon glyphicon-log-in pull-right"></a></li>
+            </ul>
+
         </div>
     </div>
 </nav>
