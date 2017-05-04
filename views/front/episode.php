@@ -47,5 +47,6 @@ $form = new \Core\HTML\BootstrapForm();
             <div class="panel-body"><?= $commentaire->contenu; ?></div>
         </div>
 
+
 <?php endforeach; ?>
 </p>

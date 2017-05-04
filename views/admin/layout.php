@@ -24,6 +24,7 @@
     <img src="img/passeport.jpg" alt="Logo du site" width="70px" height="70px">
     <h1>Billet pour l'Alaska</h1>
 
+
 </div>
 
 <nav class="navbar navbar-inverse">
