@@ -1,4 +1,3 @@
 config\config.php
 app\Autoloader.php
 core\Autoloader.php
-.idea
