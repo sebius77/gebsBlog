@@ -19,7 +19,7 @@
 
                 <div  class="panel panel-default">
                     <div class="panel-heading"><strong>Les derniers épisodes</strong></div>
-                    <ul>
+                    <ul class="list-unstyled">
                 <?php foreach($app->getTable('episode')->getThreeLast() as $item) : ; ?>
 
                         <li><a href="<?= $item->url; ?>"<?= $item->id; ?>><?= $item->titre; ?></a></li>

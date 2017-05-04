@@ -20,7 +20,7 @@ class EpisodeEntity extends Entity {
      * @return string
      */
     public function getExtrait() {
-        $html = '<p>' . substr($this->contenu,0,200) . '</p>';
+        $html = '<p>' . substr($this->contenu,0,250) . '</p>';
         $html .= '<p><a href="' . $this->getUrl() . '">Lire la suite ...</a>';
 
         return $html;

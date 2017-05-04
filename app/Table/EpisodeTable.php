@@ -60,7 +60,7 @@ class EpisodeTable extends Table {
             $attributes[] = $id;
             $sql_parts = implode(",", $sql_parts);
 
-            return $this->query("UPDATE  episode SET $sql_parts WHERE id = ?",$attributes, true);
+            return $this->query("UPDATE  episode SET $sql_parts, date=now() WHERE id = ?",$attributes, true);
         }
 
 
@@ -76,7 +76,7 @@ class EpisodeTable extends Table {
 
         $sql_parts = implode(",", $sql_parts);
 
-        return $this->query("INSERT INTO episode SET $sql_parts",$attributes,true);
+        return $this->query("INSERT INTO episode SET $sql_parts, date=now()",$attributes,true);
     }
 
     public function delete($id) {

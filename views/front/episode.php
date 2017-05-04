@@ -1,6 +1,5 @@
 <?php
 $episode = $app->getTable('episode')->find($_GET['id']);
-
 $commentaireTable = $app->getTable('commentaire');
 
 if(!empty($_POST)) {
@@ -9,8 +8,6 @@ if(!empty($_POST)) {
             'contenu' => $_POST['contenu'],
             'idEpisode' => $_POST['idEpisode']
     ]);
-
-
 }
 
 ?>
@@ -21,13 +18,21 @@ if(!empty($_POST)) {
     <?= $episode->contenu; ?>
 </p>
 
+<div class="row">
+   <ul class="pagination pull-right">
+       <li class="page-item"><a class="page-link" href="#">Précédent</a></li>
+       <li class="page-item"><a class="page-link" href="#">Suivant</a></li>
+   </ul>
+</div>
+
+
 <h2>Commentaires</h2>
 
 <?php
 $form = new \Core\HTML\BootstrapForm();
 ?>
 
-<form method="post">
+<form method="post" id="reponse">
     <?= $form->input('auteur','Auteur'); ?>
     <?= $form->input('contenu','', ['type' => 'textarea']); ?>
     <input type="hidden" name="idEpisode" value="<?= $episode->id; ?>">
@@ -35,18 +40,9 @@ $form = new \Core\HTML\BootstrapForm();
 </form>
 
 <p>
-<?php foreach($app->getTable('commentaire')->getLastById($_GET['id']) as $commentaire) : ?>
+    <?php foreach($app->getTable('commentaire')->findAllChildren($_GET['id']) as $commentaire) : ?>
 
-        <div  class="panel panel-default">
-            <div class="panel-heading"><strong>
-                    <?= $commentaire->auteur . " "; ?></strong>
-                    <?=$commentaire->date . "    "; ?>
-                    <a href="#">répondre</a>
-                    <a href="#">signaler</a>
-            </div>
-            <div class="panel-body"><?= $commentaire->contenu; ?></div>
-        </div>
+        <?php require 'commentaire.php'; ?>
 
-
-<?php endforeach; ?>
+    <?php endforeach; ?>
 </p>
