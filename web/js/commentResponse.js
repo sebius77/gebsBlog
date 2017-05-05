@@ -7,8 +7,9 @@ jQuery(document).ready(function($) {
         var parent_id = $this.data('id');
         var comment = $('#comment-' + parent_id);
 
-        //comment.after(form);
-        alert(parent_id);
+        $('#parent_id').val(parent_id);
+        comment.after(form);
+
 
     })
 

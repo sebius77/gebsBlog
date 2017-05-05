@@ -2,11 +2,12 @@
 $episode = $app->getTable('episode')->find($_GET['id']);
 $commentaireTable = $app->getTable('commentaire');
 
-if(!empty($_POST)) {
-    $resultat =$commentaireTable->add([
+if(isset($_POST) && !empty($_POST)) {
+    $resultat = $commentaireTable->add([
             'auteur' => $_POST['auteur'],
             'contenu' => $_POST['contenu'],
-            'idEpisode' => $_POST['idEpisode']
+            'idEpisode' => $_POST['idEpisode'],
+            'parent_id' => $_POST['parent_id']
     ]);
 }
 
@@ -28,18 +29,12 @@ if(!empty($_POST)) {
 
 <h2>Commentaires</h2>
 
+
+
+
 <?php
 $form = new \Core\HTML\BootstrapForm();
 ?>
-
-<form method="post" id="form-comment">
-    <input type="hidden" name="parent-id" value="0" id="parent_id">
-    <h4>Votre commentaire</h4>
-    <?= $form->input('auteur','Auteur'); ?>
-    <?= $form->input('contenu','', ['type' => 'textarea']); ?>
-    <input type="hidden" name="idEpisode" value="<?= $episode->id; ?>">
-    <button class="btn btn-success">Envoyer</button>
-</form>
 
 <p>
     <?php foreach($app->getTable('commentaire')->findAllChildren($_GET['id']) as $commentaire) : ?>
@@ -48,3 +43,14 @@ $form = new \Core\HTML\BootstrapForm();
 
     <?php endforeach; ?>
 </p>
+
+
+<form method="post" id="form-comment">
+    <input type="hidden" name="parent_id" value="0" id="parent_id">
+    <h4>Votre commentaire</h4>
+    <?= $form->input('auteur','Auteur'); ?>
+    <?= $form->input('contenu','', ['type' => 'textarea']); ?>
+    <input type="hidden" name="idEpisode" value="<?= $episode->id; ?>">
+    <button class="btn btn-success">Envoyer</button>
+</form>
+

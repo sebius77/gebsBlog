@@ -11,7 +11,7 @@
 </div>
 
 
-<div style="margin-left: 50px; background: red;">
+<div style="margin-left: 50px;">
     <?php if(!is_null($commentaire->getChildren())) : ?>
         <?php foreach($commentaire->children as $commentaire) : ?>
             <?php require 'commentaire.php'; ?>

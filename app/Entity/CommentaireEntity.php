@@ -14,7 +14,9 @@ class CommentaireEntity extends Entity {
 
 
     public function setChildren($children) {
-        $this->children[] = $children;
+        if(isset($children)) {
+            $this->children[] = $children;
+        }
     }
 
 

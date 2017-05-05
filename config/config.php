@@ -7,8 +7,8 @@
  *
  */
 return array (
-  'db_name'     => 'blogAlaska',
+  'db_name'     => 'blog',
    'db_host'    =>  'localhost',
    'db_user'    => 'root',
-   'db_pass'    => 'sedlmat'
+   'db_pass'    => ''
 );

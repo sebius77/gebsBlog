@@ -41,10 +41,10 @@ class CommentaireTable extends Table{
 
         // Ensuite nous parsons le tableau avec les nouveaux index
         foreach($comments as $index => $comment) {
-            // Si le commentaire à un attribut idCommentaire non égal à null
+            // Si le commentaire à un attribut parent_id non égal à null
             // c'est que le commentaire est l'enfant d'un autre commentaire
-            if($comment->idCommentaire != null) {
-                $comments_by_id[$comment->idCommentaire]->setChildren($comment);
+            if($comment->parent_id != 0) {
+                $comments_by_id[$comment->parent_id]->setChildren($comment);
                 unset($comments[$index]);
             }
         }
