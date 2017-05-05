@@ -1,9 +1,11 @@
-<div class="panel panel-default">
+<div class="panel panel-default" id="comment-<?= $commentaire->id; ?>">
     <div class="panel-heading"><strong>
             <?= $commentaire->auteur . " "; ?></strong>
         <?=$commentaire->date . "    "; ?>
-        <a href="#">répondre</a>
-        <a href="#">signaler</a>
+        <p class="text-right">
+            <button class="btn btn-default reply" data-id="<?= $commentaire->id; ?>">Répondre</button>
+            <button class="btn btn-default">Signaler</button>
+        </p>
     </div>
     <div class="panel-body"><?= $commentaire->contenu; ?></div>
 </div>

@@ -20,6 +20,9 @@
     <img src="img/passeport.jpg" alt="Logo du site" width="70px" height="70px">
     <h1>Billet pour l'Alaska</h1>
 </div>
+<div class="img-responsive">
+    <img src="img/alaska.jpg" alt="image alaska" width="100%" height="600px">
+</div>
 
 <nav class="navbar navbar-inverse">
     <div class="container">
@@ -57,8 +60,12 @@
 <!-- FOOTER -->
 
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="js/commentResponse.js"></script>
 
 </body>
 </html>

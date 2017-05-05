@@ -2,23 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6217d9d2-e658-455d-8414-37cc5e9c9f5a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/front/commentaire.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/commentResponse.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/img/alaska2.jpg" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/img/alaska.jpg" afterPath="$PROJECT_DIR$/web/img/alaska.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Autoloader.php" afterPath="$PROJECT_DIR$/app/Autoloader.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Entity/CommentaireEntity.php" afterPath="$PROJECT_DIR$/app/Entity/CommentaireEntity.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Entity/EpisodeEntity.php" afterPath="$PROJECT_DIR$/app/Entity/EpisodeEntity.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Table/CommentaireTable.php" afterPath="$PROJECT_DIR$/app/Table/CommentaireTable.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Table/EpisodeTable.php" afterPath="$PROJECT_DIR$/app/Table/EpisodeTable.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/config.php" afterPath="$PROJECT_DIR$/config/config.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/Autoloader.php" afterPath="$PROJECT_DIR$/core/Autoloader.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/admin/aPropos.php" afterPath="$PROJECT_DIR$/views/admin/aPropos.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/admin/accueil.php" afterPath="$PROJECT_DIR$/views/admin/accueil.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/admin/episode.php" afterPath="$PROJECT_DIR$/views/admin/episode.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/admin/livre.php" afterPath="$PROJECT_DIR$/views/admin/livre.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/front/aPropos.php" afterPath="$PROJECT_DIR$/views/front/aPropos.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/front/accueil.php" afterPath="$PROJECT_DIR$/views/front/accueil.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/front/commentaire.php" afterPath="$PROJECT_DIR$/views/front/commentaire.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/front/episode.php" afterPath="$PROJECT_DIR$/views/front/episode.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/front/livre.php" afterPath="$PROJECT_DIR$/views/front/livre.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/templates/layout.php" afterPath="$PROJECT_DIR$/views/templates/layout.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -29,53 +19,7 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="CommentaireTable.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Table/CommentaireTable.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="649">
-              <caret line="52" column="0" lean-forward="true" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
-              <folding>
-                <marker date="1493915881698" expanded="true" signature="361:406" ph="SELECT * FRO... commentaire" />
-                <marker date="1493915881698" expanded="true" signature="1718:1768" ph="INSERT INTO commentaire... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="episode.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/front/episode.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="789">
-              <caret line="44" column="43" lean-forward="false" selection-start-line="44" selection-start-column="43" selection-end-line="44" selection-end-column="43" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="commentaire.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/views/front/commentaire.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="18" column="6" lean-forward="true" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
-              <folding>
-                <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CommentaireEntity.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Entity/CommentaireEntity.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="20" column="1" lean-forward="true" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -83,7 +27,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/database/Database.php" />
         <option value="$PROJECT_DIR$/app/database/MysqlDatabase.php" />
         <option value="$PROJECT_DIR$/views/episode.php" />
         <option value="$PROJECT_DIR$/views/accueil.php" />
@@ -115,7 +58,6 @@
         <option value="$PROJECT_DIR$/views/admin/delete.php" />
         <option value="$PROJECT_DIR$/core/Table/Table.php" />
         <option value="$PROJECT_DIR$/views/admin/layout.php" />
-        <option value="$PROJECT_DIR$/views/templates/layout.php" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/app/Autoloader.php" />
         <option value="$PROJECT_DIR$/core/Autoloader.php" />
@@ -130,10 +72,12 @@
         <option value="$PROJECT_DIR$/app/Entity/EpisodeEntity.php" />
         <option value="$PROJECT_DIR$/views/admin/episode.php" />
         <option value="$PROJECT_DIR$/views/front/livre.php" />
-        <option value="$PROJECT_DIR$/views/front/episode.php" />
         <option value="$PROJECT_DIR$/app/Entity/CommentaireEntity.php" />
         <option value="$PROJECT_DIR$/app/Table/CommentaireTable.php" />
+        <option value="$PROJECT_DIR$/views/templates/layout.php" />
+        <option value="$PROJECT_DIR$/views/front/episode.php" />
         <option value="$PROJECT_DIR$/views/front/commentaire.php" />
+        <option value="$PROJECT_DIR$/web/js/commentResponse.js" />
       </list>
     </option>
   </component>
@@ -165,6 +109,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -187,7 +132,25 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gebsBlog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gebsBlog" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -204,10 +167,6 @@
               <option name="myItemId" value="views" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="front" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -219,31 +178,16 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gebsBlog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gebsBlog" />
+              <option name="myItemId" value="views" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Entity" />
+              <option name="myItemId" value="templates" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -395,18 +339,25 @@
       <workItem from="1493753908464" duration="2628000" />
       <workItem from="1493871130283" duration="1815000" />
       <workItem from="1493888446425" duration="1086000" />
-      <workItem from="1493909213108" duration="6623000" />
+      <workItem from="1493909213108" duration="6934000" />
+      <workItem from="1493971455873" duration="512000" />
+      <workItem from="1493974689004" duration="920000" />
+      <workItem from="1493976388124" duration="1357000" />
+      <workItem from="1493982712544" duration="603000" />
+      <workItem from="1493984073580" duration="391000" />
+      <workItem from="1493986803776" duration="423000" />
+      <workItem from="1493987524199" duration="175000" />
+      <workItem from="1493987962819" duration="3590000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="164293000" />
+    <option name="totallyTimeSpent" value="172575000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1919" y="0" width="1922" height="1081" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.128125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2421875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.010438413" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -455,13 +406,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/css/bootstrap.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Autoloader.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -660,16 +604,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="28" column="66" lean-forward="false" selection-start-line="28" selection-start-column="66" selection-end-line="28" selection-end-column="66" />
-          <folding>
-            <element signature="e#7#39#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/templates/layout.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -677,7 +611,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="698">
           <caret line="37" column="32" lean-forward="false" selection-start-line="37" selection-start-column="32" selection-end-line="37" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -699,7 +632,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="3" column="27" lean-forward="true" selection-start-line="3" selection-start-column="11" selection-end-line="6" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -714,7 +646,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="140">
           <caret line="7" column="4" lean-forward="false" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -722,7 +653,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="7" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -730,7 +660,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="140">
           <caret line="7" column="20" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="7" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -738,7 +667,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="21" column="80" lean-forward="true" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="80" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -746,7 +674,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="700">
           <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -761,16 +688,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="609">
           <caret line="62" column="75" lean-forward="false" selection-start-line="62" selection-start-column="75" selection-end-line="62" selection-end-column="75" />
-          <folding>
-            <marker date="1493891512986" expanded="true" signature="324:364" ph="SELECT * FRO... episode" />
-            <marker date="1493891512986" expanded="true" signature="556:604" ph="SELECT * FRO... episode" />
-            <marker date="1493891512986" expanded="true" signature="814:860" ph="SELECT * FRO... episode" />
-            <marker date="1493891512986" expanded="true" signature="1361:1416" ph="UPDATE episo... " />
-            <marker date="1493891512986" expanded="true" signature="1735:1759" ph="INSERT INTO episode... " />
-            <marker date="1493891512986" expanded="true" signature="1735:1781" ph="INSERT INTO episode... " />
-            <marker date="1493891512986" expanded="true" signature="1872:1904" ph="DELETE FROM " />
-            <marker date="1493891512986" expanded="true" signature="1985:2006" ph="SELECT * FRO... episode" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -778,7 +695,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="320">
           <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -786,7 +702,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
           <caret line="10" column="32" lean-forward="false" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -794,18 +709,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="440">
           <caret line="22" column="50" lean-forward="false" selection-start-line="22" selection-start-column="50" selection-end-line="22" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Table/CommentaireTable.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="649">
-          <caret line="52" column="0" lean-forward="true" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
-          <folding>
-            <marker date="1493915881698" expanded="true" signature="361:406" ph="SELECT * FRO... commentaire" />
-            <marker date="1493915881698" expanded="true" signature="1718:1768" ph="INSERT INTO commentaire... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -813,25 +716,47 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="400">
           <caret line="20" column="1" lean-forward="true" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Table/CommentaireTable.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="649">
+          <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/front/commentaire.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="69" lean-forward="true" selection-start-line="0" selection-start-column="69" selection-end-line="0" selection-end-column="69" />
+          <folding>
+            <marker date="1493990181011" expanded="true" signature="110:150" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/commentResponse.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="10" column="25" lean-forward="false" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/front/episode.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="789">
-          <caret line="44" column="43" lean-forward="false" selection-start-line="44" selection-start-column="43" selection-end-line="44" selection-end-column="43" />
+        <state relative-caret-position="479">
+          <caret line="34" column="36" lean-forward="false" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="36" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/front/commentaire.php">
+    <entry file="file://$PROJECT_DIR$/views/templates/layout.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="18" column="6" lean-forward="true" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="245">
+          <caret line="23" column="71" lean-forward="false" selection-start-line="23" selection-start-column="71" selection-end-line="23" selection-end-column="71" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -32,7 +32,9 @@ if(!empty($_POST)) {
 $form = new \Core\HTML\BootstrapForm();
 ?>
 
-<form method="post" id="reponse">
+<form method="post" id="form-comment">
+    <input type="hidden" name="parent-id" value="0" id="parent_id">
+    <h4>Votre commentaire</h4>
     <?= $form->input('auteur','Auteur'); ?>
     <?= $form->input('contenu','', ['type' => 'textarea']); ?>
     <input type="hidden" name="idEpisode" value="<?= $episode->id; ?>">
