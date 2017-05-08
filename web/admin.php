@@ -32,13 +32,21 @@ if ($page === 'accueil') {
 } elseif ($page === 'episode') {
     require '../views/admin/episode.php';
 } elseif ($page === 'admin') {
-    require '../views/admin/admin.php';
+    require '../views/admin/administration.php';
 } elseif ($page === 'episode.edit') {
     require '../views/admin/edit.php';
 } elseif ($page === 'episode.add') {
     require '../views/admin/add.php';
 } elseif ($page === 'episode.delete') {
     require '../views/admin/delete.php';
+} elseif($page === 'adminCommentaires') {
+    require '../views/admin/adminCommentaires.php';
+} elseif($page === 'adminEpisodes') {
+    require '../views/admin/adminEpisodes.php';
+} elseif($page === 'commentaire.delete') {
+    require '../views/admin/deleteCommentaire.php';
+} elseif($page === 'commentaire.valider') {
+    require '../views/admin/validerCommentaire.php';
 }
 
 $content = ob_get_clean();

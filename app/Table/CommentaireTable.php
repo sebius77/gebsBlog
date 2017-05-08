@@ -1,6 +1,5 @@
 <?php
 
-
 namespace App\Table;
 
 use Core\Table\Table;
@@ -13,7 +12,6 @@ use App;
 class CommentaireTable extends Table{
 
     protected $table;
-
 
     /**
      * Permet de récupérer tous les commentaires d'un épisode
@@ -41,7 +39,7 @@ class CommentaireTable extends Table{
 
         // Ensuite nous parsons le tableau avec les nouveaux index
         foreach($comments as $index => $comment) {
-            // Si le commentaire à un attribut parent_id non égal à null
+            // Si le commentaire à un attribut parent_id non égal à 0
             // c'est que le commentaire est l'enfant d'un autre commentaire
             if($comment->parent_id != 0) {
                 $comments_by_id[$comment->parent_id]->setChildren($comment);
@@ -51,9 +49,40 @@ class CommentaireTable extends Table{
         return $comments;
     }
 
+    /**
+     * permet de récupérer les enfants d'un commentaire via l'id parent
+     * @param $id
+     * @return mixed
+     */
+    public function findAllChildrenByIdComment($id) {
+        return $this->query('SELECT id FROM commentaire WHERE parent_id = ?', [$id]);
+    }
 
 
 
+    /**
+     * Supprime le commentaire et ses enfants
+     * @param $id
+     */
+    public function deleteWithChildren($id) {
+        $comments = $this->findAllChildrenByIdComment($id);
+
+        foreach($comments as $comment) {
+            $this->deleteWithChildren($comment->id);
+            $this->query("DELETE FROM commentaire WHERE id = ?", [$comment->id], true);
+        }
+        return $this->query("DELETE FROM commentaire WHERE id = ?", [$id], true);
+    }
+
+
+
+
+    /**
+     * Permet l'ajout d'un commentaire avec la date
+     * @param $fields
+     * @return mixed
+     *
+     */
     public function add($fields) {
         $sql_parts = [];
         $attributes = [];
@@ -68,4 +97,18 @@ class CommentaireTable extends Table{
         return $this->query("INSERT INTO commentaire SET $sql_parts, date=now()",$attributes,true);
     }
 
+
+    public function signal($id) {
+        return $this->query('UPDATE commentaire SET signalement = 1 WHERE id = ?', [$id], true);
+    }
+
+    public function Valid($id) {
+        return $this->query('UPDATE commentaire SET signalement = 0 WHERE id = ?', [$id], true);
+    }
+
+
+
+    public function getSignalComment() {
+        return $this->query('SELECT * FROM commentaire WHERE signalement = 1');
+    }
 }

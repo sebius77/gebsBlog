@@ -1,5 +1,8 @@
 <?php
+// Récupération d'un épisode en fonction de l'id
 $episode = $app->getTable('episode')->find($_GET['id']);
+
+//
 $commentaireTable = $app->getTable('commentaire');
 
 if(isset($_POST) && !empty($_POST)) {
@@ -7,8 +10,15 @@ if(isset($_POST) && !empty($_POST)) {
             'auteur' => $_POST['auteur'],
             'contenu' => $_POST['contenu'],
             'idEpisode' => $_POST['idEpisode'],
-            'parent_id' => $_POST['parent_id']
+            'parent_id' => $_POST['parent_id'],
+            'niveau' => $_POST['parent_level']
     ]);
+
+    if ($resultat) {
+        ?>
+        <div class="alert alert-success">Votre commentaire a bien été ajouté</div>
+        <?php
+    }
 }
 
 ?>
@@ -26,11 +36,7 @@ if(isset($_POST) && !empty($_POST)) {
    </ul>
 </div>
 
-
 <h2>Commentaires</h2>
-
-
-
 
 <?php
 $form = new \Core\HTML\BootstrapForm();
@@ -44,9 +50,9 @@ $form = new \Core\HTML\BootstrapForm();
     <?php endforeach; ?>
 </p>
 
-
 <form method="post" id="form-comment">
     <input type="hidden" name="parent_id" value="0" id="parent_id">
+    <input type="hidden" name="parent_level" value="0" id="parent_level">
     <h4>Votre commentaire</h4>
     <?= $form->input('auteur','Auteur'); ?>
     <?= $form->input('contenu','', ['type' => 'textarea']); ?>

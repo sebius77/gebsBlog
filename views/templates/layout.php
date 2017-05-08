@@ -17,11 +17,8 @@
 <!-- HEADER DE LA PAGE -->
 
 <div class="container" id="entete">
-    <img src="img/passeport.jpg" alt="Logo du site" width="70px" height="70px">
-    <h1>Billet pour l'Alaska</h1>
-</div>
-<div class="img-responsive">
-    <img src="img/alaska.jpg" alt="image alaska" width="100%" height="600px">
+        <img src="img/passeport.jpg" alt="Logo du site" width="70px" height="70px">
+        <h1>Billet pour l'Alaska</h1>
 </div>
 
 <nav class="navbar navbar-inverse">
@@ -66,6 +63,7 @@
         crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="js/commentResponse.js"></script>
+<script src="js/displayButton.js"></script>
 
 </body>
 </html>

@@ -26,6 +26,8 @@ if ($page === 'accueil') {
     require '../views/front/episode.php';
 } elseif($page === 'login') {
     require '../views/users/login.php';
+} elseif($page === 'commentaire.signaler') {
+    require '../views/front/signaler.php';
 }
 
 $content = ob_get_clean();
