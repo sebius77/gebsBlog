@@ -16,6 +16,8 @@ var_dump($commentSignal);
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <script src="lib/tinymce/tinymce.min.js"></script>
+    <script>tinymce.init({selector: 'textarea', menubar: false });</script>
 </head>
 
 <body>
