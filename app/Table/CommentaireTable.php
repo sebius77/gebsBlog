@@ -98,17 +98,40 @@ class CommentaireTable extends Table{
     }
 
 
+    /**
+     * @param $id
+     * @return mixed
+     */
     public function signal($id) {
         return $this->query('UPDATE commentaire SET signalement = 1 WHERE id = ?', [$id], true);
     }
 
+    /**
+     * @param $id
+     * @return mixed
+     */
     public function Valid($id) {
         return $this->query('UPDATE commentaire SET signalement = 0 WHERE id = ?', [$id], true);
     }
 
 
-
+    /**
+     * @return mixed
+     */
     public function getSignalComment() {
         return $this->query('SELECT * FROM commentaire WHERE signalement = 1');
     }
+
+
+    public function countComment() {
+        $compteur = 0;
+        $resultat = $this->query('SELECT COUNT(*) FROM commentaire WHERE signalement = 1');
+        foreach ($resultat as $item) {
+            $compteur += 1;
+        }
+        return $compteur;
+    }
+
+
+
 }

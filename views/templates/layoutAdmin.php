@@ -1,3 +1,7 @@
+<?php
+$commentSignal = $app->getTable('commentaire')->countComment();
+
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -25,7 +29,8 @@
         </div>
         <div class="col-md-6">
             <p class="text-right" id="connect">
-                <a href="index.php?page=login">Se connecter </a>
+                <span class="glyphicon glyphicon-bell"><span class="badge badge-danger"><?= $commentSignal; ?></span></span>
+                <a href="admin?page=login">Se déconnecter </a>
             </p>
         </div>
 
@@ -86,10 +91,18 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li><a href="index.php?page=accueil"><span class="glyphicon glyphicon-home"></span> Accueil</a></li>
-                <li><a href="index.php?page=livre"><span class="glyphicon glyphicon-book"></span> Le livre</a></li>
-                <li><a href="index.php?page=biographie"><span class="glyphicon glyphicon-leaf"></span> Biographie</a></li>
-                <li><a href="index.php?page=biographie"><span class="glyphicon glyphicon-list-alt"></span> Bibliographie</a></li>
+                <li><a href="admin.php?page=accueil"><span class="glyphicon glyphicon-home"></span> Accueil</a></li>
+                <li><a href="admin.php?page=livre"><span class="glyphicon glyphicon-book"></span> Le livre</a></li>
+                <li><a href="admin.php?page=biographie"><span class="glyphicon glyphicon-leaf"></span> Biographie</a></li>
+                <li><a href="admin.php?page=biographie"><span class="glyphicon glyphicon-list-alt"></span> Bibliographie</a></li>
+                <li class="dropdown">
+                    <a data-toggle="dropdown"><span class="glyphicon glyphicon-cog dropdown"></span> Administration <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="admin.php?page=adminEpisodes">Épisodes</a></li>
+                        <li><a href="admin.php?page=adminCommentaires">Commentaires</a></li>
+
+                    </ul>
+                </li>
 
         </div>
     </div>
@@ -101,18 +114,19 @@
     <?= $content; ?>
 </div>
 
-
 <!-- FOOTER -->
-<footer class="row text-center" id="footer">
-    <h2>© Jean Forteroche</h2>
-    <a class="fa fa-3x fa-facebook-official" aria-hidden="true" href="#"></a>
-    <a class="fa fa-3x fa-twitter-square" aria-hidden="true" href="#"></a>
-    <a class="fa fa-3x fa-google-plus-square" aria-hidden="true" href="#"></a>
-    <a class="fa fa-3x fa-instagram" aria-hidden="true" href="#"></a>
+<div class="container-fluid">
+    <footer class="row text-center" id="footer">
+        <h2>© Jean Forteroche</h2>
+        <a class="fa fa-3x fa-facebook-official" aria-hidden="true" href="#"></a>
+        <a class="fa fa-3x fa-twitter-square" aria-hidden="true" href="#"></a>
+        <a class="fa fa-3x fa-google-plus-square" aria-hidden="true" href="#"></a>
+        <a class="fa fa-3x fa-instagram" aria-hidden="true" href="#"></a>
 
-    <br/>
-    <br/>
-</footer>
+        <br/>
+        <br/>
+    </footer>
+</div>
 
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"

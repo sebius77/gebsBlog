@@ -1,8 +1,8 @@
 
 <div class="jumbotron">
-    <h1>SOMMAIRE</h1>
-    <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-    <
+    <h2 class="text-center">SOMMAIRE</h2>
+    <hr/>
+
 </div>
 
 

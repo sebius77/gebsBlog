@@ -5,15 +5,19 @@
                 <?= $commentaire->auteur . " "; ?></strong>
             <?=$commentaire->date . "    "; ?>
 
-            <p class="text-right">
-                <button class="btn btn-default reply" data-id="<?= $commentaire->id; ?>"
+
+            <div class="btn-group pull-right" style="display: flex;">
+
+                <button class="btn btn-default btn-xs reply" data-id="<?= $commentaire->id; ?>"
                         data-level="<?= $commentaire->niveau; ?>">Répondre</button>
-            </p>
+
             <form action="?page=commentaire.signaler" method="post">
                 <input type="hidden" name="id" value="<?= $commentaire->id; ?>">
                 <input type="hidden" name="idEpisode" value="<?= $episode->id; ?>">
-                <button type="submit" class="btn btn-default">Signaler</button>
+                <button type="submit" class="btn btn-default btn-xs">Signaler</button>
             </form>
+
+            </div>
 
 
         </div>

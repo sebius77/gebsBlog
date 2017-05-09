@@ -20,6 +20,7 @@ $form = new \Core\HTML\BootstrapForm($_POST);
 ?>
 
 
+
 <form method="post">
     <?= $form->input('username', 'Identifiant'); ?>
     <?= $form->input('password', 'Mot de passe', ['type' => 'password']); ?>

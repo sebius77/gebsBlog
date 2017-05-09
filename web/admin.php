@@ -32,7 +32,7 @@ if ($page === 'accueil') {
 } elseif ($page === 'episode') {
     require '../views/admin/episode.php';
 } elseif ($page === 'admin') {
-    require '../views/admin/administration.php';
+    require '../views/admin/accueil.php';
 } elseif ($page === 'episode.edit') {
     require '../views/admin/edit.php';
 } elseif ($page === 'episode.add') {
@@ -51,5 +51,5 @@ if ($page === 'accueil') {
 
 $content = ob_get_clean();
 
-require '../views/admin/layout.php';
+require '../views/templates/layoutAdmin.php';
 
