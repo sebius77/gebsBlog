@@ -20,14 +20,16 @@ if ($page === 'accueil') {
     require '../views/front/accueil.php';
 } elseif ($page === 'livre') {
     require '../views/front/livre.php';
-} elseif ($page === 'aPropos') {
-    require '../views/front/aPropos.php';
+} elseif ($page === 'bibliographie') {
+    require '../views/front/bibliographie.php';
 } elseif ($page === 'episode') {
     require '../views/front/episode.php';
 } elseif($page === 'login') {
     require '../views/users/login.php';
 } elseif($page === 'commentaire.signaler') {
     require '../views/front/signaler.php';
+} elseif($page === 'biographie') {
+    require '../views/front/biographie.php';
 }
 
 $content = ob_get_clean();

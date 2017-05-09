@@ -8,5 +8,8 @@
 
 #footer {
     background: #000000;
+}
 
+#footer a {
+    text-decoration: none;
 }

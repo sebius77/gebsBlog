@@ -89,7 +89,7 @@
                 <li><a href="index.php?page=accueil"><span class="glyphicon glyphicon-home"></span> Accueil</a></li>
                 <li><a href="index.php?page=livre"><span class="glyphicon glyphicon-book"></span> Le livre</a></li>
                 <li><a href="index.php?page=biographie"><span class="glyphicon glyphicon-leaf"></span> Biographie</a></li>
-                <li><a href="index.php?page=biographie"><span class="glyphicon glyphicon-list-alt"></span> Bibliographie</a></li>
+                <li><a href="index.php?page=bibliographie"><span class="glyphicon glyphicon-list-alt"></span> Bibliographie</a></li>
 
         </div>
     </div>

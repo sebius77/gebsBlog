@@ -1,6 +1,5 @@
 <?php
 $commentSignal = $app->getTable('commentaire')->countComment();
-var_dump($commentSignal);
 
 ?>
 <!DOCTYPE html>
@@ -98,7 +97,7 @@ var_dump($commentSignal);
                 <li><a href="admin.php?page=accueil"><span class="glyphicon glyphicon-home"></span> Accueil</a></li>
                 <li><a href="admin.php?page=livre"><span class="glyphicon glyphicon-book"></span> Le livre</a></li>
                 <li><a href="admin.php?page=biographie"><span class="glyphicon glyphicon-leaf"></span> Biographie</a></li>
-                <li><a href="admin.php?page=biographie"><span class="glyphicon glyphicon-list-alt"></span> Bibliographie</a></li>
+                <li><a href="admin.php?page=bibliographie"><span class="glyphicon glyphicon-list-alt"></span> Bibliographie</a></li>
                 <li class="dropdown">
                     <a data-toggle="dropdown"><span class="glyphicon glyphicon-cog dropdown"></span> Administration <b class="caret"></b></a>
                     <ul class="dropdown-menu">

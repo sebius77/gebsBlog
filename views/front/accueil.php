@@ -1,7 +1,7 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-8">
-            <div class="panel panel-default" style="min-height: 400px;">
+            <div class="panel panel-default" style="min-height: 450px;">
                 <div class="panel-heading">
                     <strong>Présentation</strong>
                 </div>
@@ -45,11 +45,12 @@
 
 
 
+
         </div>
     </div>
     <div class="row">
 
-        <div class="col-md-offset-1 col-md-3">
+        <div class="col-md-3">
         <div  class="panel panel-default">
             <div class="panel-heading"><strong>Le livre</strong></div>
             <img src="img/book.jpg" class="img-responsive">
@@ -67,8 +68,8 @@
         </div>
         <div class="col-md-offset-1 col-md-3">
             <div  class="panel panel-default">
-                <div class="panel-heading"><strong>La bibliographie</strong></div>
-                <img src="img/bibliographie.jpg" class="img-responsive">
+            <div class="panel-heading"><strong>La bibliographie</strong></div>
+            <img src="img/bibliographie.jpg" class="img-responsive">
 
             </div>
         </div>

@@ -1,7 +1,25 @@
+<?php
+
+$episodeNumber = $app->getTable('episode')->countEpisode();
+$pageNumber = ceil($episodeNumber/10);
+
+?>
 
 <div class="jumbotron">
     <h2 class="text-center">SOMMAIRE</h2>
     <hr/>
+
+    <nav aria-label="Page navigation example">
+        <ul class="pagination">
+    <?php
+
+    for($i=1; $i<=$pageNumber; $i++) : ?>
+
+        <li class="page-item"><a class="page-link" href="#"><?= $i; ?></a></li>
+
+    <?php endfor; ?>
+        </ul>
+    </nav>
 
 </div>
 

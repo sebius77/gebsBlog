@@ -131,10 +131,6 @@ class CommentaireTable extends Table{
         }
 
         return $compteur;
-
-
-
-
     }
 
 

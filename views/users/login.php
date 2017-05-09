@@ -29,3 +29,4 @@ $form = new \Core\HTML\BootstrapForm($_POST);
         <button class="btn btn-primary">Envoyez</button>
 
 </form>
+<br/>

@@ -49,6 +49,10 @@ if ($page === 'accueil') {
     require '../views/admin/validerCommentaire.php';
 } elseif($page === 'disconnect') {
     require '../views/users/disconnect.php';
+} elseif($page === 'biographie') {
+    require '../views/admin/biographie.php';
+} elseif($page === 'bibliographie') {
+    require '../views/admin/bibliographie.php';
 }
 
 $content = ob_get_clean();

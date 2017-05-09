@@ -83,9 +83,34 @@ class EpisodeTable extends Table {
         return $this->query("DELETE FROM episode WHERE id = ?", [$id], true);
     }
 
+    /**
+     * récupère tous les épisodes et retourne un tableau
+     * @return mixed
+     */
     public function all() {
         return $this->query("SELECT * FROM episode");
     }
+
+    /**
+     * permet de récupérer les enregistrements
+     * @param $debut (offset)
+     * @param $fin (Limit)
+     * @return mixed
+     */
+    public function getEpisodesByDebutFin($debut,$fin = 10) {
+        return $this->query("SELECT * FROM episode LIMIT {$debut},{$fin}");
+    }
+
+    public function countEpisode() {
+        $compteur = 0;
+        $resultat = $this->query('SELECT * FROM episode');
+        foreach($resultat as $item) {
+            $compteur += 1;
+        }
+
+        return $compteur;
+    }
+
 
 }
 
