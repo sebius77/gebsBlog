@@ -47,6 +47,8 @@ if ($page === 'accueil') {
     require '../views/admin/deleteCommentaire.php';
 } elseif($page === 'commentaire.valider') {
     require '../views/admin/validerCommentaire.php';
+} elseif($page === 'disconnect') {
+    require '../views/users/disconnect.php';
 }
 
 $content = ob_get_clean();

@@ -58,4 +58,11 @@ class DBAuth {
         return isset($_SESSION['auth']);
     }
 
+
+    public function disconnected() {
+        session_destroy();
+        header('location: index.php');
+    }
+
+
 }

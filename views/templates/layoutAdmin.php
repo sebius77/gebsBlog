@@ -30,7 +30,7 @@ $commentSignal = $app->getTable('commentaire')->countComment();
         <div class="col-md-6">
             <p class="text-right" id="connect">
                 <span class="glyphicon glyphicon-bell"><span class="badge badge-danger"><?= $commentSignal; ?></span></span>
-                <a href="admin?page=login">Se déconnecter </a>
+                <a href="admin.php?page=disconnect">Se déconnecter </a>
             </p>
         </div>
 
