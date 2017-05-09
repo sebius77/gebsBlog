@@ -1,4 +1,4 @@
-<h1>Administrer les commentaires</h1>
+<h1 class="text-center">Administrer les commentaires</h1>
 
 <table class="table">
     <thead>

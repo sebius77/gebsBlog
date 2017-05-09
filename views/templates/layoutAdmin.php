@@ -31,7 +31,7 @@ var_dump($commentSignal);
         <div class="col-md-6">
             <p class="text-right" id="connect">
                 <a href="admin.php?page=adminCommentaires" class="glyphicon glyphicon-bell">
-                    <span class="badge"><?= $commentSignal; ?></span></a>
+                    <span class="badge badge-notify"><?= $commentSignal; ?></span></a>
                 <a href="admin.php?page=disconnect">Se déconnecter </a>
             </p>
         </div>

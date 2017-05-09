@@ -1,4 +1,4 @@
-<h1>Administrer les épisodes</h1>
+<h1 class="text-center">Administrer les épisodes</h1>
 <p>
     <a class="btn btn-primary" href="?page=episode.add">Ajouter</a>
 </p>
