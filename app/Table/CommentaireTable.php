@@ -125,11 +125,16 @@ class CommentaireTable extends Table{
 
     public function countComment() {
         $compteur = 0;
-        $resultat = $this->query('SELECT COUNT(*) FROM commentaire WHERE signalement = 1');
-        foreach ($resultat as $item) {
+        $resultat = $this->query('SELECT * FROM commentaire WHERE signalement = 1');
+        foreach($resultat as $item) {
             $compteur += 1;
         }
+
         return $compteur;
+
+
+
+
     }
 
 

@@ -7,6 +7,7 @@ use Core\Entity\Entity;
 class CommentaireEntity extends Entity {
 
     protected $children = [];
+    protected $number;
 
     public function getChildren() {
         return $this->children;
