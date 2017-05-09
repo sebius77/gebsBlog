@@ -24,7 +24,7 @@ class BootstrapForm extends Form {
         } else {
             (
                 $input = '<input class="form-control" type="' . $type . '" name="' .
-                $name . '" value="' . $this->getValue($name) . '"');
+                $name . '" value="' . $this->getValue($name) . '">');
         }
 
         return $this->surround($label . $input);
