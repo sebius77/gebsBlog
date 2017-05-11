@@ -14,25 +14,35 @@ if (isset($_GET['page'])) {
     $page = 'accueil';
 }
 
-ob_start();
+//ob_start();
 
 if ($page === 'accueil') {
-    require '../views/front/accueil.php';
+    $controller = new \App\Controller\EpisodeController();
+    $controller->index();
 } elseif ($page === 'livre') {
-    require '../views/front/livre.php';
+    $controller = new \App\Controller\EpisodeController();
+    $controller->livre();
 } elseif ($page === 'bibliographie') {
-    require '../views/front/bibliographie.php';
+    $controller = new \App\Controller\EpisodeController();
+    $controller->bibliographie();
 } elseif ($page === 'episode') {
-    require '../views/front/episode.php';
+    $controller = new \App\Controller\EpisodeController();
+    $controller->episode();
 } elseif($page === 'login') {
-    require '../views/users/login.php';
+    $controller = new \App\Controller\EpisodeController();
+    $controller->index();
+    //require '../app/Views/users/login.php';
 } elseif($page === 'commentaire.signaler') {
-    require '../views/front/signaler.php';
+    $controller = new \App\Controller\EpisodeController();
+    $controller->index();
+    require '../app/Views/front/signaler.php';
 } elseif($page === 'biographie') {
-    require '../views/front/biographie.php';
+    $controller = new \App\Controller\EpisodeController();
+    $controller->index();
+    require '../app/Views/front/biographie.php';
 }
 
-$content = ob_get_clean();
+//$content = ob_get_clean();
 
-require '../views/templates/layout.php';
+//require '../app/views/templates/layout.php';
 

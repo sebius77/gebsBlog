@@ -1,10 +1,3 @@
-<?php
-
-$episodeNumber = $app->getTable('episode')->countEpisode();
-$pageNumber = ceil($episodeNumber/10);
-
-?>
-
 <div class="jumbotron">
     <h2 class="text-center">SOMMAIRE</h2>
     <hr/>
@@ -24,7 +17,7 @@ $pageNumber = ceil($episodeNumber/10);
 </div>
 
 
-<?php foreach ($app->getTable('episode')->all() as $episode) : ?>
+<?php foreach ($episodes as $episode) : ?>
 
     <div class="panel panel-info">
         <div class="panel-heading"><strong><?= $episode->titre; ?></strong></div>
