@@ -1,5 +1,12 @@
 <h1 class="text-center">Administrer les commentaires</h1>
 
+<?php if($success): ?>
+    <div class="alert alert-success">
+        Le commentaire a bien été supprimé.
+    </div>
+<?php endif; ?>
+
+
 <table class="table">
     <thead>
     <tr>
@@ -9,7 +16,7 @@
     </tr>
     </thead>
     <tbody>
-    <?php foreach($app->getTable('commentaire')->getSignalComment() as $commentaire) : ?>
+    <?php foreach($comments as $commentaire) : ?>
         <tr>
             <td><?= $commentaire->auteur; ?></td>
             <td><?= $commentaire->date ?></td>

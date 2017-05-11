@@ -1,4 +1,4 @@
-<!-- Affichage d'un commentaire -->
+<!-- Affichage d'un commentaire et ses enfants -->
 
 <div class="panel panel-default" id="comment-<?= $commentaire->id; ?>">
         <div class="panel-heading"><strong>
@@ -14,7 +14,7 @@
             <form action="?page=commentaire.signaler" method="post">
                 <input type="hidden" name="id" value="<?= $commentaire->id; ?>">
                 <input type="hidden" name="idEpisode" value="<?= $episode->id; ?>">
-                <button type="submit" class="btn btn-default btn-xs">Signaler</button>
+                <button type="submit" class="btn btn-default btn-xs" href="?page=commentaire.signaler">Signaler</button>
             </form>
 
             </div>

@@ -21,41 +21,44 @@ if(!$auth->logged()) {
     $app->forbidden();
 }
 
-ob_start();
-
-if ($page === 'accueil') {
-    require '../app/Views/admin/accueil.php';
+if (($page === 'admin') || ($page === 'accueil'))  {
+    $controller = new \App\Controller\Admin\EpisodeController();
+    $controller->index();
 } elseif ($page === 'livre') {
-    require '../app/Views/admin/livre.php';
-} elseif ($page === 'aPropos') {
-    require '../app/Views/admin/aPropos.php';
-} elseif ($page === 'episode') {
-    require '../app/Views/admin/episode.php';
-} elseif ($page === 'admin') {
-    require '../app/Views/admin/accueil.php';
+    $controller = new \App\Controller\Admin\EpisodeController();
+    $controller->livre();
+}  elseif ($page === 'episode') {
+    $controller = new \App\Controller\Admin\EpisodeController();
+    $controller->episode();
 } elseif ($page === 'episode.edit') {
-    require '../app/Views/admin/edit.php';
+    $controller = new \App\Controller\Admin\EpisodeController();
+    $controller->edit();
 } elseif ($page === 'episode.add') {
-    require '../app/Views/admin/add.php';
+    $controller = new \App\Controller\Admin\EpisodeController();
+    $controller->add();
 } elseif ($page === 'episode.delete') {
-    require '../app/Views/admin/delete.php';
+    $controller = new \App\Controller\Admin\EpisodeController();
+    $controller->deleteEpisode();
 } elseif($page === 'adminCommentaires') {
-    require '../app/Views/admin/adminCommentaires.php';
-} elseif($page === 'adminEpisodes') {
-    require '../app/Views/admin/adminEpisodes.php';
+    $controller = new \App\Controller\Admin\EpisodeController();
+    $controller->adminCommentaires();
+    } elseif($page === 'adminEpisodes') {
+    $controller = new \App\Controller\Admin\EpisodeController();
+    $controller->adminEpisodes();
 } elseif($page === 'commentaire.delete') {
-    require '../app/Views/admin/deleteCommentaire.php';
+    $controller = new \App\Controller\Admin\CommentairesController();
+    $controller->deleteCommentaire();
 } elseif($page === 'commentaire.valider') {
-    require '../app/Views/admin/validerCommentaire.php';
+    $controller = new \App\Controller\Admin\EpisodeController();
+    $controller->validateComment();
 } elseif($page === 'disconnect') {
-    require '../app/Views/users/disconnect.php';
+    $controller = new \App\Controller\Admin\EpisodeController();
+    $controller->disconnect();
 } elseif($page === 'biographie') {
-    require '../app/Views/admin/biographie.php';
+    $controller = new \App\Controller\Admin\EpisodeController();
+    $controller->biographie();
 } elseif($page === 'bibliographie') {
-    require '../app/Views/admin/bibliographie.php';
+    $controller = new \App\Controller\Admin\EpisodeController();
+    $controller->bibliographie();
 }
-
-$content = ob_get_clean();
-
-require '../app/Views/templates/layoutAdmin.php';
 

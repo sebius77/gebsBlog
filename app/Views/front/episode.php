@@ -1,28 +1,3 @@
-<?php
-// Récupération d'un épisode en fonction de l'id
-$episode = $app->getTable('episode')->find($_GET['id']);
-
-//
-$commentaireTable = $app->getTable('commentaire');
-
-if(isset($_POST) && !empty($_POST)) {
-    $resultat = $commentaireTable->add([
-            'auteur' => $_POST['auteur'],
-            'contenu' => $_POST['contenu'],
-            'idEpisode' => $_POST['idEpisode'],
-            'parent_id' => $_POST['parent_id'],
-            'niveau' => $_POST['parent_level']
-    ]);
-
-    if ($resultat) {
-        ?>
-        <div class="alert alert-success">Votre commentaire a bien été ajouté</div>
-        <?php
-    }
-}
-
-?>
-
 <h1><?= $episode->titre; ?></h1>
 
 <p>
@@ -38,12 +13,15 @@ if(isset($_POST) && !empty($_POST)) {
 
 <h2>Commentaires</h2>
 
-<?php
-$form = new \Core\HTML\BootstrapForm();
-?>
+<?php if($success): ?>
+    <div class="alert alert-success">Le commentaire a bien été ajouté</div>
+<?php endif; ?>
+<?php if($successSignal): ?>
+    <div class="alert alert-success">Le commentaire a bien été signalé</div>
+<?php endif; ?>
 
 <p>
-    <?php foreach($app->getTable('commentaire')->findAllChildren($_GET['id']) as $commentaire) : ?>
+    <?php foreach($commentaires as $commentaire) : ?>
 
         <?php require 'commentaire.php'; ?>
 
@@ -59,4 +37,4 @@ $form = new \Core\HTML\BootstrapForm();
     <input type="hidden" name="idEpisode" value="<?= $episode->id; ?>">
     <button class="btn btn-success">Envoyer</button>
 </form>
-
+<br/>

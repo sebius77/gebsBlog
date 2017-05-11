@@ -29,13 +29,11 @@ if ($page === 'accueil') {
     $controller = new \App\Controller\EpisodeController();
     $controller->episode();
 } elseif($page === 'login') {
-    $controller = new \App\Controller\EpisodeController();
-    $controller->index();
-    //require '../app/Views/users/login.php';
+    $controller = new \App\Controller\Admin\UsersController();
+    $controller->login();
 } elseif($page === 'commentaire.signaler') {
-    $controller = new \App\Controller\EpisodeController();
-    $controller->index();
-    require '../app/Views/front/signaler.php';
+    $controller = new \App\Controller\CommentairesController();
+    $controller->signalComment();
 } elseif($page === 'biographie') {
     $controller = new \App\Controller\EpisodeController();
     $controller->index();

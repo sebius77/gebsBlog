@@ -1,25 +1,6 @@
-<?php
-$episodeTable = $app->getTable('episode');
-
-if(!empty($_POST)) {
-    $resultat =$episodeTable->update($_GET['id'], [
-            'titre' => $_POST['titre'],
-            'contenu' => $_POST['contenu']
-        ]);
-
-    if($resultat) {
-        ?>
+<?php if($success): ?>
         <div class="alert alert-success">L'article a bien été mis à jour.</div>
-        <?php
-    }
-
-}
-
-
-$episode = $episodeTable->find($_GET['id']);
-$form = new \Core\HTML\BootstrapForm($episode);
-
-?>
+<?php endif; ?>
 
 
 <form method="post">
@@ -29,3 +10,4 @@ $form = new \Core\HTML\BootstrapForm($episode);
 
     <button class="btn btn-primary">Sauvegarder</button>
 </form>
+<br/>

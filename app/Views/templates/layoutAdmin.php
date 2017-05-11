@@ -1,7 +1,3 @@
-<?php
-$commentSignal = $app->getTable('commentaire')->countComment();
-
-?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>

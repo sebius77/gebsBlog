@@ -12,7 +12,7 @@
     </tr>
     </thead>
     <tbody>
-        <?php foreach($app->getTable('episode')->all() as $episode) : ?>
+        <?php foreach($episodes as $episode) : ?>
         <tr>
             <td><?= $episode->id; ?></td>
             <td><?= $episode->titre ?></td>
