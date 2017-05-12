@@ -119,8 +119,11 @@
         integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
         crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="js/ajaxPost.js"></script>
+<script src="js/signalComment.js"></script>
 <script src="js/commentResponse.js"></script>
 <script src="js/displayButton.js"></script>
+
 
 </body>
 </html>

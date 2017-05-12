@@ -1,3 +1,4 @@
 app/Autoloader.php
 config/
 core/Autoloader.php
+.idea
