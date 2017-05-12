@@ -97,7 +97,15 @@ class EpisodeTable extends Table {
      * @param $fin (Limit)
      * @return mixed
      */
-    public function getEpisodesByDebutFin($debut,$fin = 10) {
+    public function getPage($page) {
+        $debut = 0;
+        $fin = 3;
+
+        if($page > 1) {
+            $debut = pow(2,$page);
+            $fin = $debut + 3;
+        }
+
         return $this->query("SELECT * FROM episode LIMIT {$debut},{$fin}");
     }
 
@@ -110,6 +118,7 @@ class EpisodeTable extends Table {
 
         return $compteur;
     }
+
 
 
 }

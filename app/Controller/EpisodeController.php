@@ -18,14 +18,22 @@ class EpisodeController extends AppController {
 
 
     public function livre() {
+
+        $page = 1;
+
         $episodeNumber = App::getInstance()->getTable('episode')->countEpisode();
-        $pageNumber = ceil($episodeNumber/10);
+        $pageNumber = ceil($episodeNumber/4);
+
+        $pageCurrent = App::getInstance()->getTable('episode')->getPage($page);
 
         $episodes = App::getInstance()->getTable('episode')->all();
-        $this->render('front.livre', compact('episodes'));
+        $this->render('front.livre', compact('episodes','pageNumber','page'));
+    }
 
+    public function displayChapt() {
 
     }
+
 
 
     public function episode() {
@@ -55,6 +63,13 @@ class EpisodeController extends AppController {
         $this->render('front.episode', compact('episode', 'commentaires', 'form', 'success'));
     }
 
+    public function bibliographie() {
+        $this->render('front.bibliographie');
+    }
+
+    public function biographie() {
+        $this->render('front.biographie');
+    }
 
 
 }

@@ -1,6 +1,5 @@
 <?php
 
-
 define('ROOT', dirname(__DIR__));
 require ROOT. '/app/App.php';
 App::load();
@@ -13,8 +12,6 @@ if (isset($_GET['page'])) {
 } else {
     $page = 'accueil';
 }
-
-//ob_start();
 
 if ($page === 'accueil') {
     $controller = new \App\Controller\EpisodeController();
@@ -36,11 +33,5 @@ if ($page === 'accueil') {
     $controller->signalComment();
 } elseif($page === 'biographie') {
     $controller = new \App\Controller\EpisodeController();
-    $controller->index();
-    require '../app/Views/front/biographie.php';
+    $controller->biographie();
 }
-
-//$content = ob_get_clean();
-
-//require '../app/views/templates/layout.php';
-
