@@ -31,7 +31,7 @@ if ($page === 'accueil') {
 } elseif($page === 'login') {
     $controller = new \App\Controller\Admin\UsersController();
     $controller->login();
-} elseif($page === 'commentaire.signaler') {
+} elseif($page === 'commentaire.signale') {
     $controller = new \App\Controller\CommentairesController();
     $controller->signalComment();
 } elseif($page === 'biographie') {

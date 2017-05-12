@@ -11,10 +11,10 @@
                 <button class="btn btn-default btn-xs reply" data-id="<?= $commentaire->id; ?>"
                         data-level="<?= $commentaire->niveau; ?>">Répondre</button>
 
-            <form action="?page=commentaire.signaler" method="post">
-                <input type="hidden" name="id" value="<?= $commentaire->id; ?>">
-                <input type="hidden" name="idEpisode" value="<?= $episode->id; ?>">
-                <button type="submit" class="btn btn-default btn-xs" href="?page=commentaire.signaler">Signaler</button>
+            <form>
+                <input type="hidden" id="idComSign" name="idComment" value="<?= $commentaire->id; ?>">
+                <input type="hidden" id="idEpiSign" name="idEpisode" value="<?= $episode->id; ?>">
+                <input type="submit" id="signalComment" class="btn btn-default btn-xs" value="Signaler">
             </form>
 
             </div>
