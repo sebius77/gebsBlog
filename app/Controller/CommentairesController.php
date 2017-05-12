@@ -12,20 +12,17 @@ class CommentairesController extends AppController
     public function SignalComment()
     {
 
-        /*
+
         $successSignal = false;
 
-            $result = App::getInstance()->getTable('commentaire')->signal($_POST['id']);
+            $result = App::getInstance()->getTable('commentaire')->signal($_POST['idComment']);
 
             if ($result) {
                 $successSignal = true;
+
             }
 
-        return $successSignal;
-
-        //$this->render('front.episode', compact('successSignal'));
-        */
-        echo $_POST;
+        echo $successSignal;
 
     }
 }

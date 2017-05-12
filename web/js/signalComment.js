@@ -2,29 +2,36 @@
 jQuery(document).ready(function($) {
 
 
-    $('#signalComment').click(function (e) {
+    $('input[type="submit"]').click(function (e) {
 
         e.preventDefault();
 
-        //alert('Test de fonctionnement');
 
-        //var idEpisode = $('#idEpiSign').val();
-        //var idComment = $('#idComSign').val();
-        alert('test de fonctionnement');
+        var idComment = $(this).attr('id');
+
+        //alert(idComment);
+
+        var signalForm = new FormData();
+        signalForm.append("idComment",idComment);
+
+        //console.log(signalForm);
 
 
-        //var signalForm = new FormData();
-        //signalForm.append("idComment",idComment);
-
-        /*
-        ajaxPost('http://localhost/gebsBlog/web/index.php?page=commentaire.signale', signalForm,
+        ajaxPost('http://localhost/~sgaudin/gebsBlog/web/index.php?page=commentaire.signale', signalForm,
             function (reponse) {
-                console.log(reponse);
-            }
+
+                if(reponse) {
+                    $('#reponseSignal').show();
+                }
+
+
+            },false
         );
-        */
+
 
     })
+
+
 
 
 

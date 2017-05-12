@@ -13,12 +13,13 @@
 
 <h2>Commentaires</h2>
 
+
+<div id="reponseSignal" class="alert alert-success" style="display: none;">Le commentaire a été signalé</div>
+
 <?php if($success): ?>
     <div class="alert alert-success">Le commentaire a bien été ajouté</div>
 <?php endif; ?>
-<?php if($successSignal): ?>
-    <div class="alert alert-success">Le commentaire a bien été signalé</div>
-<?php endif; ?>
+
 
 <p>
     <?php foreach($commentaires as $commentaire) : ?>

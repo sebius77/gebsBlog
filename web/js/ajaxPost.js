@@ -1,6 +1,6 @@
 // Exécute un appel AJAX POST
 // Prend en paramètres l'URL cible, la donnée à envoyer et la fonction callback appelée en cas de succès
-function ajaxPost(url, data, callback) {
+function ajaxPost(url, data, callback, isJson) {
     var req = new XMLHttpRequest();
     req.open("POST", url);
     req.addEventListener("load", function () {
@@ -14,5 +14,16 @@ function ajaxPost(url, data, callback) {
     req.addEventListener("error", function () {
         console.error("Erreur réseau avec l'URL " + url);
     });
+    if (isJson) {
+        // Définit le contenu de la requête comme étant du JSON
+        req.setRequestHeader("Content-Type", "application/json");
+        // Transforme la donnée du format JSON vers le format texte avant l'envoi
+        data = JSON.stringify(data);
+    }
+
+
+
+
+
     req.send(data);
 }

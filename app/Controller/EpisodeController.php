@@ -53,9 +53,6 @@ class EpisodeController extends AppController {
         }
         $form = new \Core\HTML\BootstrapForm();
         $this->render('front.episode', compact('episode', 'commentaires', 'form', 'success'));
-
-
-
     }
 
 
