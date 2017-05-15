@@ -55,8 +55,6 @@ jQuery(document).ready(function($) {
                 // Si la page courante est la dernière page, on désactive le bouton suivant
                 dataValid = false;
             } else if (pageCourante < nbrePage){
-                alert('page courante : ' + pageCourante);
-
                 $('#pageSommaire').attr('title',numeroPage);
                 dataValid = true;
             }
