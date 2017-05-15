@@ -123,7 +123,7 @@
 <script src="js/signalComment.js"></script>
 <script src="js/commentResponse.js"></script>
 <script src="js/displayButton.js"></script>
-
+<script src="js/pagination.js"></script>
 
 </body>
 </html>

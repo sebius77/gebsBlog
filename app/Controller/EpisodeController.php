@@ -21,16 +21,32 @@ class EpisodeController extends AppController {
 
         $page = 1;
 
+
         $episodeNumber = App::getInstance()->getTable('episode')->countEpisode();
         $pageNumber = ceil($episodeNumber/4);
 
         $pageCurrent = App::getInstance()->getTable('episode')->getPage($page);
 
         $episodes = App::getInstance()->getTable('episode')->all();
-        $this->render('front.livre', compact('episodes','pageNumber','page'));
+
+
+
+        $this->render('front.livre', compact('episodes','pageNumber','pageCurrent','page'));
     }
 
+
+
+
     public function displayChapt() {
+
+       $pageCurrent = App::getInstance()->getTable('episode')->getPage($_POST['numeroPage']);
+       $resultat = [];
+
+       foreach ($pageCurrent as $episode) {
+           $resultat[] = '<p class="text-center"><a href="?page=episode&id=' . $episode->id  .' ">' . $episode->titre . '</a></p>';
+       }
+
+        print_r($resultat);
 
     }
 

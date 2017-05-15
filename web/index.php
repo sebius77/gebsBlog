@@ -34,4 +34,7 @@ if ($page === 'accueil') {
 } elseif($page === 'biographie') {
     $controller = new \App\Controller\EpisodeController();
     $controller->biographie();
+} elseif ($page === 'choixPage'){
+    $controller = new \App\Controller\EpisodeController();
+    $controller->displayChapt();
 }

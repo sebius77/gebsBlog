@@ -2,22 +2,24 @@
     <h2 class="text-center">SOMMAIRE</h2>
     <hr/>
 
-    <?php for($i=0; $i<=$page; $i++): ?>
+    <div id="pageSommaire" title="<?= $page; ?>"  nbrePage="<?= $pageNumber; ?>">
+    <?php foreach($pageCurrent as $chapt): ?>
 
+        <p class="text-center"><a href="?page=episode&id=<?= $chapt->id; ?>"><?= $chapt->titre; ?></a></p>
 
+    <?php endforeach; ?>
+    </div>
 
-    <?php endfor; ?>
-
-    <nav class="text-center" aria-label="Page navigation example">
+    <nav class="text-center" aria-label="Page navigation">
         <ul class="pagination">
-            <li class="page-item"><a id="pagePrev" class="page-link">Précédent</a></li>
+            <li class="page-item" id="pagePrev"><a href="#">Précédent</a></li>
 
     <?php for($i=1; $i<=$pageNumber; $i++) : ?>
 
-        <li class="page-item"><a id="page-<?= $i; ?>" class="page-link"><?= $i; ?></a></li>
+        <li class="page-item" id="page-<?= $i; ?>"><a href="#"><?= $i; ?></a></li>
 
     <?php endfor; ?>
-            <li class="page-item"><a id="pageNext" class="page-link">Suivant</a></li>
+            <li class="page-item" id="pageNext"><a href="#">Suivant</a></li>
         </ul>
     </nav>
 

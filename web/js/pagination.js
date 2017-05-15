@@ -1,0 +1,91 @@
+jQuery(document).ready(function($) {
+
+    // gestion lors du clique des boutons du sommaires
+    $('.page-item').click(function (e) {
+
+        // Pour ne pas recharger la page au clic
+        e.preventDefault();
+
+        // On récupère la page courante
+        var pageCourante = $('#pageSommaire').attr('title');
+
+        // On récupère le nombre total de page
+        var nbrePage = $('#pageSommaire').attr('nbrePage');
+
+        // On récupère le bouton précédent
+        var precedent = $('#pagePrev');
+
+        // On récupère le bouton suivant
+        var suivant = $('#pageNext');
+
+        // Variable pour afficher les résultats
+        var dataValid = false;
+
+        // On récupére la page cliquée
+        var idPage = $(this).attr('id');
+        if ((idPage !== 'pagePrev') || (idPage !== 'pageNext')) {
+            var numeroPage = idPage.split("-");
+            numeroPage = numeroPage[1];
+            dataValid = true;
+            $('#pageSommaire').attr('title',numeroPage);
+            //alert(pageCourante);
+        }
+
+        if (idPage === 'pagePrev') {
+            //alert('page précédente');
+            //alert('page courante : ' + pageCourante);
+            // Cas ou le bouton cliqué est "précédent"
+            // Il faut traiter le cas ou la page actuelle serait la page 1 et donc pas de page précédente
+            if(pageCourante === 1) {
+                //alert('La page courante est la 1');
+                // Si la page courante est la première, on désactive le bouton
+                dataValid = false;
+            } else if (pageCourante > 1) {
+                numeroPage = Number(pageCourante) - 1;
+                dataValid = true;
+                //alert('La page courante est superieur a 1 donc c bon');
+            }
+        }
+
+        if (idPage === 'pageNext') {
+            //alert('page courante : ' + pageCourante);
+            // Cas ou le bouton cliqué est "suivant"
+            // Il faut traiter le cas ou la page serait la dernière page et donc pas de page suivante
+            if(pageCourante === nbrePage) {
+                //alert('La page courante est la derniere');
+                // Si la page courante est la dernière page, on désactive le bouton suivant
+                dataValid = false;
+            } else if (pageCourante < nbrePage){
+                //alert('La page courante est inferieur a la derniere');
+                numeroPage = Number(pageCourante) + 1;
+                //alert(numeroPage);
+                dataValid = true;
+            }
+        }
+
+        /* Selon le bouton cliqué dans la pagination
+           Nous transmettons la page sélectionné pour récupérer
+           les informations dans la base de données grâce à une
+           requête Ajax.
+         */
+
+            if(dataValid === true) {
+
+                var pageForm = new FormData();
+                pageForm.append("numeroPage", numeroPage);
+
+                ajaxPost('http://localhost/gebsBlog/web/index.php?page=choixPage', pageForm,
+                    function (reponse) {
+
+                    if(reponse) {
+                        console.log(reponse);
+                        //$('#pageSommaire').html(reponse);
+
+                    }
+
+                    }, false
+                );
+            }
+
+    })
+});
