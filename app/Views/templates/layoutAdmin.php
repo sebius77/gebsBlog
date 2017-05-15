@@ -113,14 +113,14 @@
     <?= $content; ?>
 </div>
 
+
+
 <!-- FOOTER -->
 <div class="container-fluid">
     <footer class="row text-center" id="footer">
         <h2>© Jean Forteroche</h2>
         <a class="fa fa-3x fa-facebook-official" aria-hidden="true" href="#"></a>
         <a class="fa fa-3x fa-twitter-square" aria-hidden="true" href="#"></a>
-        <a class="fa fa-3x fa-google-plus-square" aria-hidden="true" href="#"></a>
-        <a class="fa fa-3x fa-instagram" aria-hidden="true" href="#"></a>
 
         <br/>
         <br/>
@@ -132,8 +132,11 @@
         integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
         crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="js/ajaxPost.js"></script>
+<script src="js/signalComment.js"></script>
 <script src="js/commentResponse.js"></script>
 <script src="js/displayButton.js"></script>
+<script src="js/pagination.js"></script>
 
 </body>
 </html>

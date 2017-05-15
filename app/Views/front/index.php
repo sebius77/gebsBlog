@@ -5,7 +5,7 @@
                 <div class="panel-heading">
                     <strong>Présentation</strong>
                 </div>
-                <p>
+                <p class="text-justify">
                     David avait dû s’asseoir lorsqu’il avait entendu le prénom Florence. Il était devenu blanc un
                     instant. Il allait peut-être perdre Florence avant même de lui avoir avoué son amour.
                     Il devait empêcher Prélude de continuer dans son délire. Mais comment pouvait-il stopper
@@ -31,20 +31,17 @@
         </div>
         <div class="col-lg-4">
 
-
-                <div  class="panel panel-default">
+                <div class="panel panel-default">
                     <div class="panel-heading"><strong>Les derniers épisodes</strong></div>
-                    <ul class="list-unstyled">
+                    <ul id="lastEpisode" class="list-unstyled">
                 <?php foreach($episodes as $item) : ; ?>
 
-                        <li><a href="<?= $item->url; ?>"<?= $item->id; ?>><?= $item->titre; ?></a></li>
+                    <li><a href="<?= $item->url; ?>"><?= $item->titre; ?></a>
+                        <?= strftime('%d %b %G', strtotime($item->date)); ?></li>
 
                 <?php endforeach; ?>
                     </ul>
                 </div>
-
-
-
 
         </div>
     </div>

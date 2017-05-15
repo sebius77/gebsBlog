@@ -1,5 +1,4 @@
 <?php
-use Core\Auth\DBAuth;
 
 define('ROOT', dirname(__DIR__));
 require ROOT. '/app/App.php';
@@ -9,14 +8,6 @@ if (isset($_GET['page'])) {
     $page = $_GET['page'];
 } else {
     $page = 'admin';
-}
-
-// Auth
-$app = App::getInstance();
-
-$auth = new DBAuth($app->getDb());
-if(!$auth->logged()) {
-    $app->forbidden();
 }
 
 if (($page === 'admin') || ($page === 'accueil'))  {
@@ -40,15 +31,15 @@ if (($page === 'admin') || ($page === 'accueil'))  {
 } elseif($page === 'adminCommentaires') {
     $controller = new \App\Controller\Admin\EpisodeController();
     $controller->adminCommentaires();
-    } elseif($page === 'adminEpisodes') {
+} elseif($page === 'adminEpisodes') {
     $controller = new \App\Controller\Admin\EpisodeController();
     $controller->adminEpisodes();
 } elseif($page === 'commentaire.delete') {
     $controller = new \App\Controller\Admin\CommentairesController();
     $controller->deleteCommentaire();
 } elseif($page === 'commentaire.valider') {
-    $controller = new \App\Controller\Admin\EpisodeController();
-    $controller->validateComment();
+    $controller = new \App\Controller\Admin\CommentairesController();
+    $controller->validComment();
 } elseif($page === 'disconnect') {
     $controller = new \App\Controller\Admin\UsersController();
     $controller->disconnect();

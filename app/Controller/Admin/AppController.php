@@ -3,21 +3,23 @@
 
 namespace App\Controller\Admin;
 
-use Core\Controller\Controller;
+use Core\Auth\DBAuth;
+use \App;
 
+class AppController extends \App\Controller\AppController {
 
-class AppController extends Controller {
-
-    protected $viewPath;
     protected $template = 'layoutAdmin';
 
 
     public function __construct()
     {
-        $this->viewPath = ROOT . '/app/Views/';
+        parent::__construct();
 
+        $app = App::getInstance();
+        $auth = new DBAuth($app->getDb());
 
+        if(!$auth->logged()) {
+            $app->forbidden();
+        }
     }
-
-
 }

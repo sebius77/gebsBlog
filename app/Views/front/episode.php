@@ -1,6 +1,8 @@
+<!-- Affichage de l'épisode et de ses commentaires -->
+
 <h1><?= $episode->titre; ?></h1>
 
-<p>
+<p class="text-justify">
     <?= $episode->contenu; ?>
 </p>
 
@@ -13,7 +15,7 @@
 
 <h2>Commentaires</h2>
 
-
+<!-- Message de succès lorsqu'une réponse a été effectuée -->
 <div id="reponseSignal" class="alert alert-success" style="display: none;">Le commentaire a été signalé</div>
 
 <?php if($success): ?>
@@ -21,11 +23,11 @@
 <?php endif; ?>
 
 
+
+<!-- Affichage des commentaires et du formulaire -->
 <p>
     <?php foreach($commentaires as $commentaire) : ?>
-
         <?php require 'commentaire.php'; ?>
-
     <?php endforeach; ?>
 </p>
 

@@ -1,6 +1,5 @@
 <?php
 
-
 namespace App\Table;
 
 use Core\Table\Table;
@@ -63,7 +62,6 @@ class EpisodeTable extends Table {
 
          return $this->query("UPDATE  episode SET $sql_parts, date=now() WHERE id = ?",$attributes, true);
      }
-
 
     /**
      * Fonction permettant l'ajout d'un épisode
@@ -134,7 +132,4 @@ class EpisodeTable extends Table {
         return $compteur;
     }
 
-
-
 }
-

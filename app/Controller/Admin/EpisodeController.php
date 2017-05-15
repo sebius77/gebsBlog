@@ -21,13 +21,20 @@ class EpisodeController extends AppController {
 
 
     public function livre() {
-        $commentSignal = $this->commentSignal();
-        $episodeNumber = App::getInstance()->getTable('episode')->countEpisode();
-        $pageNumber = ceil($episodeNumber/10);
 
-        $episodes = App::getInstance()->getTable('episode')->all();
-        $this->render('admin.livre', compact('episodes','commentSignal'));
-    }
+            $page = 1;
+
+            $episodeNumber = App::getInstance()->getTable('episode')->countEpisode();
+            $pageNumber = ceil($episodeNumber/4);
+
+            $pageCurrent = App::getInstance()->getTable('episode')->getPage($page);
+
+            $episodes = App::getInstance()->getTable('episode')->all();
+
+
+            $this->render('admin.livre', compact('episodes','pageNumber','pageCurrent','page'));
+        }
+
 
 
     public function biographie() {
@@ -141,6 +148,28 @@ class EpisodeController extends AppController {
             $result = App::getInstance()->getTable('episode')->delete($_POST['id']);
             header('Location: admin.php?page=adminEpisodes');
         }
+
+    }
+
+
+
+
+
+    /**
+     * Permet l'affichade des différents chapitre dans le sommaire
+     *
+     *
+     */
+    public function displayChapt() {
+
+        $pageCurrent = App::getInstance()->getTable('episode')->getPage($_POST['numeroPage']);
+        $resultat = [];
+
+        foreach ($pageCurrent as $episode) {
+            $resultat[] = '<p class="text-center"><a href="?page=episode&id=' . $episode->id  .' ">' . $episode->titre . '</a></p>';
+        }
+
+        echo json_encode($resultat);
 
     }
 

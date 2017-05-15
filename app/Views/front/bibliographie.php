@@ -2,7 +2,7 @@
     <div class="panel-heading">
         <strong>Bibliographie</strong>
     </div>
-    <p>
+    <p class="text-justify">
         David avait dû s’asseoir lorsqu’il avait entendu le prénom Florence. Il était devenu blanc un
         instant. Il allait peut-être perdre Florence avant même de lui avoir avoué son amour.
         Il devait empêcher Prélude de continuer dans son délire. Mais comment pouvait-il stopper

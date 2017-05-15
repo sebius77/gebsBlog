@@ -19,6 +19,4 @@ class CommentaireEntity extends Entity {
             $this->children[] = $children;
         }
     }
-
-
 }

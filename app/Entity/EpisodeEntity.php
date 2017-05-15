@@ -26,6 +26,4 @@ class EpisodeEntity extends Entity {
         return $html;
     }
 
-
-
 }

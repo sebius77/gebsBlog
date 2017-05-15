@@ -8,7 +8,9 @@ use App;
 
 class EpisodeController extends AppController {
 
-
+    /**
+     * retourne la vue accueil
+     */
     public function index() {
         $episodes = App::getInstance()->getTable('episode')->getThreeLAst();
 
@@ -16,11 +18,12 @@ class EpisodeController extends AppController {
 
     }
 
-
+    /**
+     * Retourne la vue de la page livre
+     */
     public function livre() {
 
         $page = 1;
-
 
         $episodeNumber = App::getInstance()->getTable('episode')->countEpisode();
         $pageNumber = ceil($episodeNumber/4);
@@ -35,8 +38,11 @@ class EpisodeController extends AppController {
     }
 
 
-
-
+    /**
+     * Permet l'affichade des différents chapitre dans le sommaire
+     *
+     *
+     */
     public function displayChapt() {
 
        $pageCurrent = App::getInstance()->getTable('episode')->getPage($_POST['numeroPage']);
@@ -51,7 +57,9 @@ class EpisodeController extends AppController {
     }
 
 
-
+    /**
+     * Retourne la vue d'un épisode et de ses commentaires
+     */
     public function episode() {
 
 
@@ -79,10 +87,16 @@ class EpisodeController extends AppController {
         $this->render('front.episode', compact('episode', 'commentaires', 'form', 'success'));
     }
 
+    /**
+     * Retourne la vue de la page bibliographie
+     */
     public function bibliographie() {
         $this->render('front.bibliographie');
     }
 
+    /**
+     * Retourne la vue de la page biographie
+     */
     public function biographie() {
         $this->render('front.biographie');
     }

@@ -57,11 +57,18 @@ class App {
         Core\Autoloader::register();
     }
 
+    /**
+     * Lorsque l'utilisateur tente d'accéder à la partie admin
+     * sans autorisation
+     */
     public function forbidden() {
         header('HTTP/1.0 403 Forbidden');
         die('Accès Interdit');
     }
 
+    /**
+     * Lorsque l'url indiqué n'existe pas
+     */
     public function notFound() {
         header('HTTP/1.0 404 Not Found');
         die('PAge introuvable');
