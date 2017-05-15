@@ -46,7 +46,7 @@ class EpisodeController extends AppController {
            $resultat[] = '<p class="text-center"><a href="?page=episode&id=' . $episode->id  .' ">' . $episode->titre . '</a></p>';
        }
 
-        print_r($resultat);
+        echo json_encode($resultat);
 
     }
 

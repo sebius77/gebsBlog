@@ -1,5 +1,4 @@
 <?php
-
 use Core\Auth\DBAuth;
 
 define('ROOT', dirname(__DIR__));
@@ -11,7 +10,6 @@ if (isset($_GET['page'])) {
 } else {
     $page = 'admin';
 }
-
 
 // Auth
 $app = App::getInstance();
@@ -52,7 +50,7 @@ if (($page === 'admin') || ($page === 'accueil'))  {
     $controller = new \App\Controller\Admin\EpisodeController();
     $controller->validateComment();
 } elseif($page === 'disconnect') {
-    $controller = new \App\Controller\Admin\EpisodeController();
+    $controller = new \App\Controller\Admin\UsersController();
     $controller->disconnect();
 } elseif($page === 'biographie') {
     $controller = new \App\Controller\Admin\EpisodeController();
@@ -61,4 +59,3 @@ if (($page === 'admin') || ($page === 'accueil'))  {
     $controller = new \App\Controller\Admin\EpisodeController();
     $controller->bibliographie();
 }
-
