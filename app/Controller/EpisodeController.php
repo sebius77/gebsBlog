@@ -65,8 +65,8 @@ class EpisodeController extends AppController {
 
         if(isset($_POST) && !empty($_POST)) {
             $attributes = [
-                'auteur' => $_POST['auteur'],
-                'contenu' => $_POST['contenu'],
+                'auteur' => htmlentities($_POST['auteur']),
+                'contenu' => htmlentities($_POST['contenu']),
                 'idEpisode' => $_POST['idEpisode'],
                 'parent_id' => $_POST['parent_id'],
                 'niveau' => $_POST['parent_level']
