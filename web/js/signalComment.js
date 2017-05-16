@@ -20,7 +20,7 @@ jQuery(document).ready(function($) {
             function (reponse) {
 
                 if(reponse) {
-                    $('#reponseSignal').show();
+                    $('#reponseSignal').html('<div class="alert alert-success">Le commentaire a été signalé</div>');
                 }
 
 

@@ -1,6 +1,5 @@
 <?php
 
-
 namespace App\Controller;
 
 use App;
@@ -20,7 +19,5 @@ class CommentairesController extends AppController
         echo $successSignal;
     }
 
+
 }
-
-
-

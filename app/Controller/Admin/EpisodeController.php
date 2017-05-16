@@ -6,12 +6,19 @@ use App;
 
 class EpisodeController extends AppController {
 
+    /**
+     * permet de connaître le nombre de commentaires signalé
+     * @return mixed
+     */
     public function commentSignal() {
         $countComment = App::getInstance()->getTable('commentaire')->countComment();
         return $countComment;
     }
 
 
+    /**
+     * @return la vue de la page d'accueil
+     */
     public function index() {
         $commentSignal = $this->commentSignal();
         $episodes = App::getInstance()->getTable('episode')->getThreeLAst();
@@ -20,6 +27,9 @@ class EpisodeController extends AppController {
     }
 
 
+    /**
+     * @return la vue de la page livre
+     */
     public function livre() {
 
             $page = 1;
@@ -36,18 +46,26 @@ class EpisodeController extends AppController {
         }
 
 
-
+    /**
+     * @return la vue de la page biographie en tant qu'administrateur
+     */
     public function biographie() {
         $commentSignal = $this->commentSignal();
         $this->render('admin.biographie', compact('commentSignal'));
     }
 
+    /**
+     * @return la vue de la page bibliographie en tant qu'administrateur
+     */
     public function bibliographie() {
         $commentSignal = $this->commentSignal();
         $this->render('admin.bibliographie', compact('commentSignal'));
     }
 
 
+    /**
+     * @return la vue d'administration des commentaires
+     */
     public function adminCommentaires() {
         $commentSignal = $this->commentSignal();
         $comments = App::getInstance()->getTable('commentaire')->getSignalComment();
@@ -55,6 +73,10 @@ class EpisodeController extends AppController {
     }
 
 
+    /**
+     *
+     * @return la vue d'administration des épisodes
+     */
     public function adminEpisodes() {
         $commentSignal = $this->commentSignal();
         $episodes = App::getInstance()->getTable('episode')->all();
@@ -62,13 +84,11 @@ class EpisodeController extends AppController {
     }
 
 
+    /**
+     * Permet l'affichage de l'épisode et ses commentaires
+     */
     public function episode() {
 
-        $commentSignal = $this->commentSignal();
-        $episode = App::getInstance()->getTable('episode')->find($_GET['id']);
-        $commentaires = App::getInstance()->getTable('commentaire')->findAllChildren($_GET['id']);
-
-        $success = false;
 
         if(isset($_POST) && !empty($_POST)) {
             $attributes = [
@@ -76,22 +96,46 @@ class EpisodeController extends AppController {
                 'contenu' => $_POST['contenu'],
                 'idEpisode' => $_POST['idEpisode'],
                 'parent_id' => $_POST['parent_id'],
-                'niveau' => $_POST['parent_level']
+                'niveau' => $_POST['niveau']
             ];
 
             $add = App::getInstance()->getTable('commentaire')->add($attributes);
-            if($add) {
-                $success = true;
-                unset($_POST);
-            }
         }
+
+        $episodesId = App::getInstance()->getTable('episode')->allEpisodeById();
+        $tabId = [];
+        foreach ($episodesId as $item) {
+            $tabId[] = $item->id;
+        }
+
+        $nbrEpisode = count($tabId);
+
+        //renvoi l'index de l'épisode
+        $currentIndex = array_search($_GET['id'],$tabId);
+
+        if($currentIndex < $nbrEpisode -1 ) {
+            $nextEpisode = $tabId[$currentIndex + 1];
+        } else {
+            $nextEpisode = $tabId[$currentIndex];
+        }
+        if($currentIndex > 0) {
+            $prevEpisode = $tabId[$currentIndex - 1];
+        } else {
+            $prevEpisode = $tabId[$currentIndex];
+        }
+
+        $episode = App::getInstance()->getTable('episode')->find($_GET['id']);
+        $commentaires = App::getInstance()->getTable('commentaire')->findAllChildren($_GET['id']);
+
+
         $form = new \Core\HTML\BootstrapForm();
-        $this->render('admin.episode', compact('episode', 'commentaires', 'form',
-            'commentSignal',
-            'success'));
+        $this->render('admin.episode', compact('episode','nextEpisode', 'prevEpisode', 'commentaires', 'form', 'success'));
     }
 
 
+    /**
+     * Permet l'édition d'un épisode
+     */
     public function edit()
     {
         $commentSignal = $this->commentSignal();
@@ -117,6 +161,10 @@ class EpisodeController extends AppController {
 
     }
 
+
+    /**
+     * permet l'ajout d'un épisode
+     */
     public function add() {
 
         $commentSignal = $this->commentSignal();
@@ -139,6 +187,9 @@ class EpisodeController extends AppController {
     }
 
 
+    /**
+     * Permet la suppression d'un épisode via son id
+     */
     public function deleteEpisode() {
 
         $commentSignal = $this->commentSignal();
@@ -152,13 +203,10 @@ class EpisodeController extends AppController {
     }
 
 
-
-
-
     /**
-     * Permet l'affichade des différents chapitre dans le sommaire
+     * Permet l'affichade des différents chapitre dans le sommaire avec une fonction ajax
      *
-     *
+     * @return JSON
      */
     public function displayChapt() {
 

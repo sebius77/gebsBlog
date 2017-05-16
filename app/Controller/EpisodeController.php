@@ -32,8 +32,6 @@ class EpisodeController extends AppController {
 
         $episodes = App::getInstance()->getTable('episode')->all();
 
-
-
         $this->render('front.livre', compact('episodes','pageNumber','pageCurrent','page'));
     }
 
@@ -58,34 +56,57 @@ class EpisodeController extends AppController {
 
 
     /**
+     * @return Object Episode
+     * @return Object Commentaires
      * Retourne la vue d'un épisode et de ses commentaires
      */
     public function episode() {
 
 
-        $episode = App::getInstance()->getTable('episode')->find($_GET['id']);
-        $commentaires = App::getInstance()->getTable('commentaire')->findAllChildren($_GET['id']);
-
-        $success = false;
-
         if(isset($_POST) && !empty($_POST)) {
             $attributes = [
-              'auteur' => $_POST['auteur'],
-              'contenu' => $_POST['contenu'],
-              'idEpisode' => $_POST['idEpisode'],
-              'parent_id' => $_POST['parent_id'],
-              'niveau' => $_POST['parent_level']
+                'auteur' => $_POST['auteur'],
+                'contenu' => $_POST['contenu'],
+                'idEpisode' => $_POST['idEpisode'],
+                'parent_id' => $_POST['parent_id'],
+                'niveau' => $_POST['niveau']
             ];
 
             $add = App::getInstance()->getTable('commentaire')->add($attributes);
-            if($add) {
-                $success = true;
-                unset($_POST);
-            }
         }
+
+        $episodesId = App::getInstance()->getTable('episode')->allEpisodeById();
+        $tabId = [];
+        foreach ($episodesId as $item) {
+            $tabId[] = $item->id;
+        }
+
+        $nbrEpisode = count($tabId);
+
+        //renvoi l'index de l'épisode
+        $currentIndex = array_search($_GET['id'],$tabId);
+
+        if($currentIndex < $nbrEpisode -1 ) {
+            $nextEpisode = $tabId[$currentIndex + 1];
+        } else {
+            $nextEpisode = $tabId[$currentIndex];
+        }
+        if($currentIndex > 0) {
+            $prevEpisode = $tabId[$currentIndex - 1];
+        } else {
+            $prevEpisode = $tabId[$currentIndex];
+        }
+
+        $episode = App::getInstance()->getTable('episode')->find($_GET['id']);
+        $commentaires = App::getInstance()->getTable('commentaire')->findAllChildren($_GET['id']);
+
+
+
         $form = new \Core\HTML\BootstrapForm();
-        $this->render('front.episode', compact('episode', 'commentaires', 'form', 'success'));
+        $this->render('front.episode', compact('episode','nextEpisode', 'prevEpisode', 'commentaires', 'form', 'success'));
     }
+
+
 
     /**
      * Retourne la vue de la page bibliographie

@@ -3,25 +3,22 @@
         <strong>Biographie</strong>
     </div>
     <p>
-        David avait dû s’asseoir lorsqu’il avait entendu le prénom Florence. Il était devenu blanc un
-        instant. Il allait peut-être perdre Florence avant même de lui avoir avoué son amour.
-        Il devait empêcher Prélude de continuer dans son délire. Mais comment pouvait-il stopper
-        ce parasite créé par lui quelques années auparavant ? Ce n’était pas un adversaire ordinaire.
-        David avait déjà détruit plus d’un virus, mais il s’agissait de virus installés sur des
-        machines isolées. Aujourd’hui, c’est une sorte de virus qui a pris place sur tous les ordinateurs
-        de la planète. Et en plus, ce virus, nommé Prélude, avait un soupçon, non négligeable,
-        d’intelligence.
-
-        Aujourd’hui, c’est son anniversaire. Il a vingt-six ans, mais il ne s’en souvient plus.
-        Il ne prête pas attention à ce genre de détails. David est un homme distrait, timide,
-        mais sûr de lui. Il est grand et mince. De grandes mains prolongent ses longs bras.
-        Il lui serait possible de tenir deux bouteilles de Champagne dans chacune de ses mains,
-        mais il ne boit jamais. L'alcool le rend malade et malheureux, voir dépressif.
-
-        Cela ressemblait aux gros ordinateurs que David avait pu voir dans des films de science fiction.
-        Beaucoup de petites lumières indiquaient qu’il était en fonction. À la base, une sorte d’aquarium
-        avait été installé tout autour. Certainement le système de refroidissement car des bulles montaient
-        sans cesse, preuve que l’eau était en ébullition. Soudain, David resta bouche bée.
-        Une voix caverneuse sortie des écrans où venait de s’afficher le mot « Prélude ».
+        1988 : le Triathlon historique (ISBN 978-2226034328)
+        1988 : Solitude nord (ISBN 978-2092901656)
+        1992 : Transsibérie, le mythe sauvage (ISBN 978-2742736539)
+        1993 : La vie en nord
+        1994 : Solitudes blanches (roman) (ISBN 978-2742731145)
+        1994 : Otchum, chef de meute (ISBN 2-7324-2281-9)
+        1995 : L'Enfant des neiges (ISBN 978-2290305720)
+        1997 : Un hiver (ISBN 978-2732423753)
+        1997 : Nord (Album)
+        1997 : Robinson du froid (ISBN 978-2744124310)
+        1998 : le Grand Brâme (ISBN 978-2266205078)
+        1998 : Destin Nord (ISBN 978-2221087411)
+        1998 : Territoire (ISBN 978-2830704631)
+        1998 : Taïga (réédition illustrée de Transsibérie) (ISBN 2-7324-2453-6)
+        1999 : l'Odyssée blanche (ISBN 978-2266162401)
+        2000 : C'est encore loin l'Alaska... (ISBN 978-2226116918)
+        2001 : Le Chant du Grand Nord (deux tomes : le Chasseur de rêves (ISBN 978-2266126809) et la Tempête blanche (ISBN 978-2266126816))
     </p>
 </div>

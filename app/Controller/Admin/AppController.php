@@ -22,4 +22,10 @@ class AppController extends \App\Controller\AppController {
             $app->forbidden();
         }
     }
+
+    public function setTemplate($template) {
+        $this->template = $template;
+    }
+
+
 }

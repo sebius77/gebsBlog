@@ -4,6 +4,8 @@ define('ROOT', dirname(__DIR__));
 require ROOT. '/app/App.php';
 App::load();
 
+$app = App::getInstance();
+
 if (isset($_GET['page'])) {
     $page = $_GET['page'];
 } else {
@@ -18,6 +20,7 @@ if (($page === 'admin') || ($page === 'accueil'))  {
     $controller->livre();
 }  elseif ($page === 'episode') {
     $controller = new \App\Controller\Admin\EpisodeController();
+    $controller->setTemplate('layoutAdmin2');
     $controller->episode();
 } elseif ($page === 'episode.edit') {
     $controller = new \App\Controller\Admin\EpisodeController();
@@ -49,4 +52,6 @@ if (($page === 'admin') || ($page === 'accueil'))  {
 } elseif($page === 'bibliographie') {
     $controller = new \App\Controller\Admin\EpisodeController();
     $controller->bibliographie();
+} else {
+    $app->notFound();
 }

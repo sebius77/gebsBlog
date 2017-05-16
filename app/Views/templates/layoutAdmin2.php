@@ -11,6 +11,7 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <script src="lib/tinymce/tinymce.min.js"></script>
 </head>
 
 <body>
@@ -25,7 +26,9 @@
         </div>
         <div class="col-md-6">
             <p class="text-right" id="connect">
-                <a href="index.php?page=login">Se connecter </a>
+                <a href="admin.php?page=adminCommentaires" class="glyphicon glyphicon-bell">
+                    <span class="badge badge-notify"><?= $commentSignal; ?></span></a>
+                <a href="admin.php?page=disconnect">Se déconnecter </a>
             </p>
         </div>
 
@@ -86,10 +89,18 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li><a href="index.php?page=accueil"><span class="glyphicon glyphicon-home"></span> Accueil</a></li>
-                <li><a href="index.php?page=livre"><span class="glyphicon glyphicon-book"></span> Le livre</a></li>
-                <li><a href="index.php?page=biographie"><span class="glyphicon glyphicon-leaf"></span> Biographie</a></li>
-                <li><a href="index.php?page=bibliographie"><span class="glyphicon glyphicon-list-alt"></span> Bibliographie</a></li>
+                <li><a href="admin.php?page=accueil"><span class="glyphicon glyphicon-home"></span> Accueil</a></li>
+                <li><a href="admin.php?page=livre"><span class="glyphicon glyphicon-book"></span> Le livre</a></li>
+                <li><a href="admin.php?page=biographie"><span class="glyphicon glyphicon-leaf"></span> Biographie</a></li>
+                <li><a href="admin.php?page=bibliographie"><span class="glyphicon glyphicon-list-alt"></span> Bibliographie</a></li>
+                <li class="dropdown">
+                    <a data-toggle="dropdown"><span class="glyphicon glyphicon-cog dropdown"></span> Administration <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="admin.php?page=adminEpisodes">Épisodes</a></li>
+                        <li><a href="admin.php?page=adminCommentaires">Commentaires</a></li>
+
+                    </ul>
+                </li>
 
         </div>
     </div>
@@ -102,14 +113,18 @@
 </div>
 
 
+
 <!-- FOOTER -->
-<footer class="row text-center" id="footer">
-    <h2>© Jean Forteroche</h2>
-    <a class="fa fa-3x fa-facebook-official" aria-hidden="true" href="#"></a>
-    <a class="fa fa-3x fa-twitter-square" aria-hidden="true" href="#"></a>
-    <br/>
-    <br/>
-</footer>
+<div class="container-fluid">
+    <footer class="row text-center" id="footer">
+        <h2>© Jean Forteroche</h2>
+        <a class="fa fa-3x fa-facebook-official" aria-hidden="true" href="#"></a>
+        <a class="fa fa-3x fa-twitter-square" aria-hidden="true" href="#"></a>
+
+        <br/>
+        <br/>
+    </footer>
+</div>
 
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"

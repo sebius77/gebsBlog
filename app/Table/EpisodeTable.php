@@ -100,6 +100,18 @@ class EpisodeTable extends Table {
         return $this->query("SELECT * FROM episode");
     }
 
+
+    /**
+     * Permet de récupérer tous les id des épisodes
+     * @return mixed
+     */
+    public function allEpisodeById() {
+        return $this->query("SELECT id FROM episode");
+    }
+
+
+
+
     /**
      * permet de récupérer les enregistrements
      * @param $debut (offset)

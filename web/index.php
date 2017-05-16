@@ -6,7 +6,6 @@ App::load();
 
 $app = App::getInstance();
 
-
 if (isset($_GET['page'])) {
     $page = $_GET['page'];
 } else {
@@ -37,4 +36,6 @@ if ($page === 'accueil') {
 } elseif ($page === 'choixPage'){
     $controller = new \App\Controller\EpisodeController();
     $controller->displayChapt();
+} else {
+    $app->notFound();
 }

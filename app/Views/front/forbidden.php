@@ -1,0 +1,1 @@
+<h1>Vous n'êtes pas autorisé à accéder à la partie administration !!!</h1>

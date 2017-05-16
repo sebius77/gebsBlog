@@ -8,21 +8,13 @@
 
 <div class="row">
    <ul class="pagination pull-right">
-       <li class="page-item"><a class="page-link" href="#">Précédent</a></li>
-       <li class="page-item"><a class="page-link" href="#">Suivant</a></li>
+       <li class="epi-item"><a class="page-link" href="?page=episode&id=<?= $prevEpisode; ?>">Précédent</a></li>
+       <li class="epi-item"><a class="page-link" href="?page=episode&id=<?= $nextEpisode; ?>">Suivant</a></li>
    </ul>
 </div>
 
 <h2>Commentaires</h2>
-
-<!-- Message de succès lorsqu'une réponse a été effectuée -->
-<div id="reponseSignal" class="alert alert-success" style="display: none;">Le commentaire a été signalé</div>
-
-<?php if($success): ?>
-    <div class="alert alert-success">Le commentaire a bien été ajouté</div>
-<?php endif; ?>
-
-
+<div id="reponseSignal"></div>
 
 <!-- Affichage des commentaires et du formulaire -->
 <p>
@@ -38,6 +30,6 @@
     <?= $form->input('auteur','Auteur'); ?>
     <?= $form->input('contenu','', ['type' => 'textarea']); ?>
     <input type="hidden" name="idEpisode" value="<?= $episode->id; ?>">
-    <button class="btn btn-success">Envoyer</button>
+    <button type="submit" id="submitComment" class="btn btn-success">Envoyer</button>
 </form>
 <br/>

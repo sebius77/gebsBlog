@@ -1,6 +1,6 @@
 <div class="container">
     <div class="row">
-        <div class="col-lg-8">
+        <div class="col-sm-8">
             <div class="panel panel-default" style="min-height: 450px;">
                 <div class="panel-heading">
                     <strong>Présentation</strong>
@@ -29,7 +29,7 @@
                 </p>
             </div>
         </div>
-        <div class="col-lg-4">
+        <div class="col-sm-4">
 
                 <div class="panel panel-default">
                     <div class="panel-heading"><strong>Les derniers épisodes</strong></div>

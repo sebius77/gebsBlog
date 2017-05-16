@@ -37,7 +37,8 @@
                 <ul class="list-unstyled">
                     <?php foreach($episodes as $item) : ; ?>
 
-                        <li><a href="<?= $item->url; ?>"<?= $item->id; ?>><?= $item->titre; ?></a></li>
+                        <li><a href="<?= $item->url; ?>"><?= $item->titre; ?></a>
+                            <?= strftime('%d %b %G', strtotime($item->date)); ?></li>
 
                     <?php endforeach; ?>
                 </ul>

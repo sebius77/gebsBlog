@@ -34,6 +34,7 @@ class DBAuth {
     }
 
     /**
+     * Permet de tester la connexion de l'utilisateur
      * @param $username
      * @param $password
      * @return bool
@@ -52,6 +53,7 @@ class DBAuth {
     }
 
     /**
+     * Permet de savoir si l'utilisateur est connecté ou non
      * @return bool
      */
     public function logged() {
@@ -59,6 +61,9 @@ class DBAuth {
     }
 
 
+    /**
+     * Déconnecte l'utilisateur et renvoie vers la page d'accueil
+     */
     public function disconnected() {
         session_destroy();
         header('location: index.php');
