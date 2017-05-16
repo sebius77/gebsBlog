@@ -69,7 +69,7 @@ class EpisodeController extends AppController {
                 'contenu' => $_POST['contenu'],
                 'idEpisode' => $_POST['idEpisode'],
                 'parent_id' => $_POST['parent_id'],
-                'niveau' => $_POST['niveau']
+                'niveau' => $_POST['parent_level']
             ];
 
             $add = App::getInstance()->getTable('commentaire')->add($attributes);
