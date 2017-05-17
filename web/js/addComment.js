@@ -25,7 +25,7 @@ jQuery(document).ready(function($) {
         data.append("parent_id", parent_id);
         data.append("idEpisode", idEpisode);
 
-        ajaxPost('http://localhost/~sgaudin/gebsBlog/web/?page=commentaire.add', data,
+        ajaxPost('http://sg-oc.iut-orsay.fr/?page=commentaire.add', data,
             function (reponse) {
                 if(reponse === true) {
                     //console.log(reponse);

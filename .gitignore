@@ -2,3 +2,4 @@ app/Autoloader.php
 config/
 core/Autoloader.php
 .idea
+web/js/

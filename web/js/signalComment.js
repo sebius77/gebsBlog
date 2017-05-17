@@ -16,7 +16,7 @@ jQuery(document).ready(function($) {
         //console.log(signalForm);
 
 
-        ajaxPost('http://localhost/~sgaudin/gebsBlog/web/index.php?page=commentaire.signale', signalForm,
+        ajaxPost('http://sg-oc.iut-orsay.fr/?page=commentaire.signale', signalForm,
             function (reponse) {
 
                 if(reponse) {

@@ -71,7 +71,7 @@ jQuery(document).ready(function($) {
                 var pageForm = new FormData();
                 pageForm.append("numeroPage", numeroPage);
 
-                ajaxPost('http://localhost/~sgaudin/gebsBlog/web/index.php?page=choixPage', pageForm,
+                ajaxPost('http://sg-oc.iut-orsay.fr/?page=choixPage', pageForm,
                     function (reponse) {
 
                     if(reponse) {
