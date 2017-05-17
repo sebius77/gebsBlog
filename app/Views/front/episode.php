@@ -14,6 +14,13 @@
 </div>
 
 <h2>Commentaires</h2>
+<?php if (isset($success) && ($success === true)): ?>
+    <div class="alert alert-success">Le commentaire a été ajouté avec succès!!</div>
+<?php endif; ?>
+<?php if (isset($success) && ($success === false)): ?>
+    <div class="alert alert-error">Erreur de syntaxe !!!!</div>
+<?php endif; ?>
+
 <div id="reponseSignal"></div>
 
 <!-- Affichage des commentaires et du formulaire -->

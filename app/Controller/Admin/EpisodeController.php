@@ -86,20 +86,35 @@ class EpisodeController extends AppController {
 
     /**
      * Permet l'affichage de l'épisode et ses commentaires
+     * avec la gestion de la pagination
      */
     public function episode() {
 
+        $success = "";
 
         if(isset($_POST) && !empty($_POST)) {
-            $attributes = [
-                'auteur' => htmlentities($_POST['auteur']),
-                'contenu' => htmlentities($_POST['contenu']),
-                'idEpisode' => $_POST['idEpisode'],
-                'parent_id' => $_POST['parent_id'],
-                'niveau' => $_POST['parent_level']
-            ];
 
-            $add = App::getInstance()->getTable('commentaire')->add($attributes);
+            $regexAuteur ='#(^([a-z][A-Z])[0-9]*){,32})#';
+
+            if(preg_match($regexAuteur,$_POST['auteur'])) {
+
+                $attributes = [
+                    'auteur' => htmlentities($_POST['auteur']),
+                    'contenu' => htmlentities($_POST['contenu']),
+                    'idEpisode' => $_POST['idEpisode'],
+                    'parent_id' => $_POST['parent_id'],
+                    'niveau' => $_POST['parent_level']
+                ];
+
+                $add = App::getInstance()->getTable('commentaire')->add($attributes);
+
+                $success = true;
+
+            } else {
+                $success = false;
+            }
+
+
         }
 
         $episodesId = App::getInstance()->getTable('episode')->allEpisodeById();
