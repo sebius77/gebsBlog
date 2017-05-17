@@ -37,7 +37,7 @@
                 <?php foreach($episodes as $item) : ; ?>
 
                     <li><a href="<?= $item->url; ?>"><?= $item->titre; ?></a>
-			<?php setlocale (LC_ALL, "fr_FR"); ?>
+			<?php setlocale(LC_TIME,'fr_FR.utf8', 'fra'); ?>
                         <?= strftime('%d %b %G', strtotime($item->date)); ?></li>
 
                 <?php endforeach; ?>
