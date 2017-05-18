@@ -105,8 +105,9 @@
 <!-- FOOTER -->
 <footer class="row text-center" id="footer">
     <h2>© Jean Forteroche</h2>
-    <a class="fa fa-3x fa-facebook-official" aria-hidden="true" href="#"></a>
-    <a class="fa fa-3x fa-twitter-square" aria-hidden="true" href="#"></a>
+    <a href="#" class="fa fa-3x fa-facebook-official" aria-hidden="true" name="fb_share" type="box_count" ></a>
+    <a href="http://twitter.com/share" class="fa fa-3x fa-twitter-square" aria-hidden="true"></a>
+    <a ></a>
     <br/>
     <br/>
 </footer>
@@ -116,11 +117,14 @@
         integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
         crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+<script src="http://static.ak.fbcdn.net/connect.php/js/FB.Share" type="text/javascript"></script>
 <script src="js/ajaxPost.js"></script>
 <script src="js/signalComment.js"></script>
 <script src="js/commentResponse.js"></script>
 <script src="js/displayButton.js"></script>
 <script src="js/pagination.js"></script>
+<script src="js/animation.js"></script>
 
 </body>
 </html>

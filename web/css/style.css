@@ -22,3 +22,11 @@
 .text-justify {
     padding: 5px 5px 5px 5px;
 }
+
+
+.panel-body a span{
+    position:absolute;
+    top:120px;
+    left:60px;
+    display:none;
+}

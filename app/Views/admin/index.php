@@ -51,10 +51,15 @@
     </div>
     <div class="row">
 
-        <div class="col-md-offset-1 col-md-3">
+        <div class="col-md-3">
             <div  class="panel panel-default">
                 <div class="panel-heading"><strong>Le livre</strong></div>
-                <img src="img/book.jpg" class="img-responsive">
+                <div class="panel-body">
+                    <a href="?page=livre">
+                        <span id ="panel-span-1" class="description">Par ici là lecture...</span>
+                        <img id ="panel-img-1" src="img/book.jpg" class="img-responsive">
+                </div>
+                </a>
 
             </div>
         </div>
@@ -63,15 +68,25 @@
         <div class="col-md-offset-1 col-md-3">
             <div  class="panel panel-default">
                 <div class="panel-heading"><strong>La biographie</strong></div>
-                <img src="img/biographie.jpg" class="img-responsive">
+
+                <div class="panel-body">
+                    <a href="?page=biographie">
+                        <span id ="panel-span-2" class="description">Ma biographie..</span>
+                        <img id="panel-img-2" src="img/biographie.jpg" class="img-responsive">
+                </div>
+                </a>
 
             </div>
         </div>
         <div class="col-md-offset-1 col-md-3">
             <div  class="panel panel-default">
                 <div class="panel-heading"><strong>La bibliographie</strong></div>
-                <img src="img/bibliographie.jpg" class="img-responsive">
-
+                <div class="panel-body">
+                    <a href="?page=bibliographie">
+                        <span id ="panel-span-3" class="description">Ma bibliographie...</span>
+                        <img id ="panel-img-3" src="img/bibliographie.jpg" class="img-responsive">
+                </div>
+                </a>
             </div>
         </div>
     </div>

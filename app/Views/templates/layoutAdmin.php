@@ -116,16 +116,14 @@
 
 
 <!-- FOOTER -->
-<div class="container-fluid">
-    <footer class="row text-center" id="footer">
-        <h2>© Jean Forteroche</h2>
-        <a class="fa fa-3x fa-facebook-official" aria-hidden="true" href="#"></a>
-        <a class="fa fa-3x fa-twitter-square" aria-hidden="true" href="#"></a>
-
-        <br/>
-        <br/>
-    </footer>
-</div>
+<footer class="row text-center" id="footer">
+    <h2>© Jean Forteroche</h2>
+    <a href="#" class="fa fa-3x fa-facebook-official" aria-hidden="true" name="fb_share" type="box_count" ></a>
+    <a href="http://twitter.com/share" class="fa fa-3x fa-twitter-square" aria-hidden="true"></a>
+    <a ></a>
+    <br/>
+    <br/>
+</footer>
 
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"
@@ -137,6 +135,7 @@
 <script src="js/commentResponse.js"></script>
 <script src="js/displayButton.js"></script>
 <script src="js/pagination.js"></script>
+<script src="js/animation.js"></script>
 
 </body>
 </html>
