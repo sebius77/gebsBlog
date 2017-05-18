@@ -22,8 +22,6 @@
             <li class="page-item" id="pageNext"><a href="#">Suivant</a></li>
         </ul>
     </nav>
-
-
 </div>
 
 

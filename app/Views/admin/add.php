@@ -1,5 +1,5 @@
 <?php if($success): ?>
-        <div class="alert alert-success">L'article a bien été ajouté.</div>
+        <div class="alert alert-success">L'épisode a bien été ajouté.</div>
 <?php endif; ?>
 
 <form method="post">

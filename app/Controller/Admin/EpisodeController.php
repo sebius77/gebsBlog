@@ -199,7 +199,7 @@ class EpisodeController extends AppController {
         }
 
         $form = new \Core\HTML\BootstrapForm();
-        $this->render('admin.edit', compact('commentSignal','form', 'success'));
+        $this->render('admin.add', compact('commentSignal','form', 'success'));
     }
 
 
