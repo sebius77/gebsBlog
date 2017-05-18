@@ -14,6 +14,12 @@
 </div>
 
 <h2>Commentaires</h2>
+<?php if($success === false): ?>
+<div class="alert alert-danger">Le champ auteur n'est pas correctement renseigné !!!!</div>
+<?php endif; ?>
+<?php if($success === true): ?>
+    <div class="alert alert-success">Votre commentaire a bien été ajouté !!!</div>
+<?php endif; ?>
 <div id="reponseSignal"></div>
 
 <!-- Affichage des commentaires et du formulaire -->

@@ -63,17 +63,29 @@ class EpisodeController extends AppController {
     public function episode() {
 
 
-        if(isset($_POST) && !empty($_POST)) {
-            $attributes = [
-                'auteur' => htmlentities($_POST['auteur']),
-                'contenu' => htmlentities($_POST['contenu']),
-                'idEpisode' => $_POST['idEpisode'],
-                'parent_id' => $_POST['parent_id'],
-                'niveau' => $_POST['parent_level']
-            ];
+            $success = null;
 
-            $add = App::getInstance()->getTable('commentaire')->add($attributes);
-        }
+            $regexAuteur = "#^[a-zA-Z0-9][a-zA-Z0-9]{2,15}$#";
+
+            if(preg_match($regexAuteur,$_POST['auteur'])) {
+
+                $attributes = [
+                    'auteur' => htmlentities($_POST['auteur']),
+                    'contenu' => htmlentities($_POST['contenu']),
+                    'idEpisode' => $_POST['idEpisode'],
+                    'parent_id' => $_POST['parent_id'],
+                    'niveau' => $_POST['parent_level']
+                ];
+
+                $add = App::getInstance()->getTable('commentaire')->add($attributes);
+
+                $success = true;
+
+            } else {
+                $success = false;
+            }
+
+
 
         $episodesId = App::getInstance()->getTable('episode')->allEpisodeById();
         $tabId = [];

@@ -12,7 +12,7 @@ class EpisodeEntity extends Entity {
      * @return string
      */
     public function getUrl() {
-        return 'index.php?page=episode&id=' . $this->id;
+        return '?page=episode&id=' . $this->id;
     }
 
     /**

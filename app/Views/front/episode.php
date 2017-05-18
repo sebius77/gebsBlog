@@ -14,11 +14,11 @@
 </div>
 
 <h2>Commentaires</h2>
-<?php if (isset($success) && ($success === true)): ?>
-    <div class="alert alert-success">Le commentaire a été ajouté avec succès!!</div>
+<?php if($success === false): ?>
+    <div class="alert alert-danger">Le champ auteur n'est pas correctement renseigné !!!!</div>
 <?php endif; ?>
-<?php if (isset($success) && ($success === false)): ?>
-    <div class="alert alert-error">Erreur de syntaxe !!!!</div>
+<?php if($success === true): ?>
+    <div class="alert alert-success">Votre commentaire a bien été ajouté !!!</div>
 <?php endif; ?>
 
 <div id="reponseSignal"></div>
