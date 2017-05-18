@@ -27,7 +27,7 @@
 </div>
 
 
-<?php foreach ($episodes as $episode) : ?>
+<?php foreach ($pageCurrent as $episode) : ?>
 
     <div class="panel panel-info">
         <div class="panel-heading"><strong><?= $episode->titre; ?></strong></div>
