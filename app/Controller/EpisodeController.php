@@ -63,9 +63,12 @@ class EpisodeController extends AppController {
     public function episode() {
 
 
-            $success = null;
+        $success = null;
+
+        if(isset($_POST) && !empty($_POST)) {
 
             $regexAuteur = "#^[a-zA-Z0-9][a-zA-Z0-9]{2,15}$#";
+
 
             if(preg_match($regexAuteur,$_POST['auteur'])) {
 
@@ -84,6 +87,9 @@ class EpisodeController extends AppController {
             } else {
                 $success = false;
             }
+
+
+        }
 
 
 
