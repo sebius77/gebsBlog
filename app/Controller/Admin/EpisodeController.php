@@ -159,8 +159,8 @@ class EpisodeController extends AppController {
         $success = false;
         if (!empty($_POST)) {
             $resultat = App::getInstance()->getTable('episode')->update($_GET['id'], [
-                'titre' => $_POST['titre'],
-                'contenu' => $_POST['contenu']
+                'titre' => htmlentities($_POST['titre']),
+                'contenu' => htmlentities($_POST['contenu'])
             ]);
 
             if ($resultat) {
@@ -189,8 +189,8 @@ class EpisodeController extends AppController {
 
         if(!empty($_POST)) {
             $resultat = App::getInstance()->getTable('episode')->add([
-                'titre' => $_POST['titre'],
-                'contenu' => $_POST['contenu']
+                'titre' => htmlentities($_POST['titre']),
+                'contenu' => htmlentities($_POST['contenu'])
             ]);
 
             if($resultat) {
