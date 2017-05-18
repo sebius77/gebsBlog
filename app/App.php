@@ -85,7 +85,7 @@ class App {
     public function notFoundAdmin() {
         header('HTTP/1.0 404 Not Found');
         $controller = new \App\Controller\AppController();
-        $controller->render('front.notFound');
+        $controller->render('admin.notFound');
         die();
     }
 }
