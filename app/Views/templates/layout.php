@@ -107,7 +107,6 @@
     <h2>© Jean Forteroche</h2>
     <a href="#" class="fa fa-3x fa-facebook-official" aria-hidden="true" name="fb_share" type="box_count" ></a>
     <a href="http://twitter.com/share" class="fa fa-3x fa-twitter-square" aria-hidden="true"></a>
-    <a ></a>
     <br/>
     <br/>
 </footer>
