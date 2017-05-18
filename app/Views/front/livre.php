@@ -31,7 +31,7 @@
 
     <div class="panel panel-info">
         <div class="panel-heading"><strong><?= $episode->titre; ?></strong></div>
-        <p><?= $episode->extrait; ?></p>
+        <?= $episode->extrait; ?>
     </div>
 
 <?php endforeach; ?>
