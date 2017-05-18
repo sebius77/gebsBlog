@@ -160,7 +160,7 @@ class EpisodeController extends AppController {
         if (!empty($_POST)) {
             $resultat = App::getInstance()->getTable('episode')->update($_GET['id'], [
                 'titre' => htmlentities($_POST['titre']),
-                'contenu' => htmlentities($_POST['contenu'])
+                'contenu' => $_POST['contenu']
             ]);
 
             if ($resultat) {
