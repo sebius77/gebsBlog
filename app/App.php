@@ -72,7 +72,17 @@ class App {
     /**
      * Lorsque l'url indiqué n'existe pas
      */
-    public function notFound() {
+    public function notFoundFront() {
+        header('HTTP/1.0 404 Not Found');
+        $controller = new \App\Controller\AppController();
+        $controller->render('front.notFound');
+        die();
+    }
+
+    /**
+     * Lorsque l'url indiqué n'existe pas
+     */
+    public function notFoundAdmin() {
         header('HTTP/1.0 404 Not Found');
         $controller = new \App\Controller\AppController();
         $controller->render('front.notFound');

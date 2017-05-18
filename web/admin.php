@@ -31,6 +31,9 @@ if (($page === 'admin') || ($page === 'accueil'))  {
 } elseif ($page === 'episode.delete') {
     $controller = new \App\Controller\Admin\EpisodeController();
     $controller->deleteEpisode();
+} elseif($page === 'signalCommentaires') {
+    $controller = new \App\Controller\Admin\EpisodeController();
+    $controller->signalCommentaires();
 } elseif($page === 'adminCommentaires') {
     $controller = new \App\Controller\Admin\EpisodeController();
     $controller->adminCommentaires();
@@ -53,5 +56,5 @@ if (($page === 'admin') || ($page === 'accueil'))  {
     $controller = new \App\Controller\Admin\EpisodeController();
     $controller->bibliographie();
 } else {
-    $app->notFound();
+    $app->notFoundAdmin();
 }

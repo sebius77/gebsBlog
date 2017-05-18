@@ -23,6 +23,16 @@ class CommentaireTable extends Table{
     }
 
     /**
+     * Permet la récupération de tous les commentaires
+     * @return mixed
+     */
+    public function getAll() {
+        return $this->query('SELECT * FROM commentaire');
+    }
+
+
+
+    /**
      * Permet de récupérer tous les enfants d'un commentaire
      * @param $id
      * @return array

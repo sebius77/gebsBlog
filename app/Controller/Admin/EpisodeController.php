@@ -32,18 +32,18 @@ class EpisodeController extends AppController {
      */
     public function livre() {
 
-            $page = 1;
+        $commentSignal = $this->commentSignal();
+        $page = 1;
 
-            $episodeNumber = App::getInstance()->getTable('episode')->countEpisode();
-            $pageNumber = ceil($episodeNumber/4);
+        $episodeNumber = App::getInstance()->getTable('episode')->countEpisode();
+        $pageNumber = ceil($episodeNumber/4);
+        $pageCurrent = App::getInstance()->getTable('episode')->getPage($page);
 
-            $pageCurrent = App::getInstance()->getTable('episode')->getPage($page);
-
-            $episodes = App::getInstance()->getTable('episode')->all();
+        $episodes = App::getInstance()->getTable('episode')->all();
 
 
-            $this->render('admin.livre', compact('episodes','pageNumber','pageCurrent','page'));
-        }
+        $this->render('admin.livre', compact('episodes','pageNumber','pageCurrent','page','commentSignal'));
+    }
 
 
     /**
@@ -68,10 +68,18 @@ class EpisodeController extends AppController {
      */
     public function adminCommentaires() {
         $commentSignal = $this->commentSignal();
-        $comments = App::getInstance()->getTable('commentaire')->getSignalComment();
+        $comments = App::getInstance()->getTable('commentaire')->getAll();
         $this->render('admin.adminCommentaires', compact('commentSignal','comments'));
     }
 
+    /**
+     * @return la vue d'administration des commentaires
+     */
+    public function signalCommentaires() {
+        $commentSignal = $this->commentSignal();
+        $comments = App::getInstance()->getTable('commentaire')->getSignalComment();
+        $this->render('admin.signalCommentaires', compact('commentSignal','comments'));
+    }
 
     /**
      *
@@ -90,6 +98,14 @@ class EpisodeController extends AppController {
      */
     public function episode() {
 
+        //test si l'épisode existe
+        $exist = App::getInstance()->getTable('episode')->find($_GET['id']);
+        if($exist === false) {
+            return App::getInstance()->notFoundAdmin();
+        }
+
+
+        $commentSignal = $this->commentSignal();
         $success = null;
 
         if(isset($_POST) && !empty($_POST)) {
@@ -145,7 +161,8 @@ class EpisodeController extends AppController {
 
 
         $form = new \Core\HTML\BootstrapForm();
-        $this->render('admin.episode', compact('episode','nextEpisode', 'prevEpisode', 'commentaires', 'form', 'success'));
+        $this->render('admin.episode', compact('episode','nextEpisode', 'prevEpisode', 'commentaires',
+            'form', 'success','commentSignal'));
     }
 
 

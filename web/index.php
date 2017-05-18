@@ -37,5 +37,5 @@ if ($page === 'accueil') {
     $controller = new \App\Controller\EpisodeController();
     $controller->displayChapt();
 } else {
-    $app->notFound();
+    $app->notFoundFront();
 }

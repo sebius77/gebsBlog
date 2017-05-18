@@ -62,6 +62,12 @@ class EpisodeController extends AppController {
      */
     public function episode() {
 
+        //test si l'épisode existe
+        $exist = App::getInstance()->getTable('episode')->find($_GET['id']);
+        if($exist === false) {
+            return App::getInstance()->notFoundFront();
+        }
+
 
         $success = null;
 

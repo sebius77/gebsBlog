@@ -96,8 +96,9 @@
                 <li class="dropdown">
                     <a data-toggle="dropdown"><span class="glyphicon glyphicon-cog dropdown"></span> Administration <b class="caret"></b></a>
                     <ul class="dropdown-menu">
-                        <li><a href="admin.php?page=adminEpisodes">Épisodes</a></li>
-                        <li><a href="admin.php?page=adminCommentaires">Commentaires</a></li>
+                        <li><a href="admin.php?page=adminEpisodes">Les épisodes</a></li>
+                        <li><a href="admin.php?page=adminCommentaires">Tous les commentaires</a></li>
+                        <li><a href="admin.php?page=signalCommentaires">Les commentaires signalés</a></li>
 
                     </ul>
                 </li>

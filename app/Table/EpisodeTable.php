@@ -26,7 +26,7 @@ class EpisodeTable extends Table {
      * @return mixed
      */
     public function getThreeLast() {
-        return $this->query('SELECT * FROM episode ORDER BY date DESC LIMIT 3');
+        return $this->query('SELECT * FROM episode ORDER BY date DESC LIMIT 5');
     }
 
 

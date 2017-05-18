@@ -27,7 +27,7 @@
         </div>
         <div class="col-md-6">
             <p class="text-right" id="connect">
-                <a href="admin.php?page=adminCommentaires" class="glyphicon glyphicon-bell">
+                <a href="admin.php?page=signalCommentaires" class="glyphicon glyphicon-bell">
                     <span class="badge badge-notify"><?= $commentSignal; ?></span></a>
                 <a href="admin.php?page=disconnect">Se déconnecter </a>
             </p>
@@ -97,8 +97,9 @@
                 <li class="dropdown">
                     <a data-toggle="dropdown"><span class="glyphicon glyphicon-cog dropdown"></span> Administration <b class="caret"></b></a>
                     <ul class="dropdown-menu">
-                        <li><a href="admin.php?page=adminEpisodes">Épisodes</a></li>
-                        <li><a href="admin.php?page=adminCommentaires">Commentaires</a></li>
+                        <li><a href="admin.php?page=adminEpisodes">Les épisodes</a></li>
+                        <li><a href="admin.php?page=adminCommentaires">Tous les commentaires</a></li>
+                        <li><a href="admin.php?page=signalCommentaires">Les commentaires signalés</a></li>
 
                     </ul>
                 </li>
