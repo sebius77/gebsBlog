@@ -2,4 +2,6 @@ app/Autoloader.php
 config/
 core/Autoloader.php
 .idea
-web/js/
+web/js/addComment.js
+web/js/pagination.js
+web/js/signalComment.js
