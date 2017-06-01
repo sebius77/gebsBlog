@@ -22,7 +22,7 @@
     <div class="row">
         <div class="col-md-6 entete">
             <img src="img/passeport.jpg" alt="Logo du site" width="70px" height="70px">
-            <h1>Billet pour l'Alaska</h1>
+            <h1>Billet simple pour l'Alaska</h1>
         </div>
         <div class="col-md-6">
             <p class="text-right" id="connect">
@@ -118,7 +118,7 @@
 <!-- FOOTER -->
 <footer class="row text-center" id="footer">
     <h2>© Jean Forteroche</h2>
-    <a href="#" class="fa fa-3x fa-facebook-official" aria-hidden="true" name="fb_share" type="box_count" ></a>
+    <a href="https://www.facebook.com/" class="fa fa-3x fa-facebook-official" aria-hidden="true" name="fb_share" type="box_count" ></a>
     <a href="http://twitter.com/share" class="fa fa-3x fa-twitter-square" aria-hidden="true"></a>
     <a ></a>
     <br/>
