@@ -1,17 +1,33 @@
 <?php
 
+
+
+// On définit une constante ROOT qui est le chemin racine(gebsBlog)
 define('ROOT', dirname(__DIR__));
+
+// On charge la classe App.php qui s'occupe de charger les autoloader
+// des répertoires app et Core
 require ROOT. '/app/App.php';
 App::load();
 
+// On instancie la classe App avec une méthode statique
+// et un Design PAttern : singleton.
+// Ceci pour réutiliser l'instance n'importe ou dans notre code
 $app = App::getInstance();
 
+
+// Nous récupérons la requête de l'utilsateur, l'url sélectionnée.
+// Si le parametre page n'esiste pas la page par défaut est l'accueil
 if (isset($_GET['page'])) {
     $page = $_GET['page'];
 } else {
     $page = 'accueil';
 }
 
+
+
+// En fonction de la demande utilisateur
+// On redirige sur la bonne méthode du controleur
 if ($page === 'accueil') {
     $controller = new \App\Controller\EpisodeController();
     $controller->index();

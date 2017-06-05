@@ -109,6 +109,7 @@ class CommentaireTable extends Table{
 
 
     /**
+     * Méthode permettant de signaler un commentaire
      * @param $id
      * @return mixed
      */
@@ -117,6 +118,7 @@ class CommentaireTable extends Table{
     }
 
     /**
+     * Méthode permettant de retirer un commentaire signalé
      * @param $id
      * @return mixed
      */
@@ -126,13 +128,17 @@ class CommentaireTable extends Table{
 
 
     /**
+     * Méthode permettant de récupérer les commentaires signalés.
      * @return mixed
      */
     public function getSignalComment() {
         return $this->query('SELECT * FROM commentaire WHERE signalement = 1');
     }
 
-
+    /**
+     * Méthode permettant de compter les commentaires signalé
+     * @return int
+     */
     public function countComment() {
         $compteur = 0;
         $resultat = $this->query('SELECT * FROM commentaire WHERE signalement = 1');
