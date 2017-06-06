@@ -4,9 +4,20 @@ namespace App\Controller;
 
 use App;
 
+
+/**
+ * Class CommentairesController
+ * @package App\Controller
+ */
+
 class CommentairesController extends AppController
 {
 
+
+    /**
+     * Méthode permettant de signaler un commentaire
+     * @return bool
+     */
     public function SignalComment()
     {
 

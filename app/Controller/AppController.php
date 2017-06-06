@@ -4,6 +4,11 @@ namespace App\Controller;
 
 use Core\Controller\Controller;
 
+/**
+ * Class AppController
+ * @package App\Controller
+ * Classe Parent des controllers de la partie Front
+ */
 class AppController extends Controller {
 
    protected $viewPath;

@@ -7,6 +7,9 @@ use Core\Table\Table;
 /**
  * Class Episode
  * @package App\Table
+ *
+ * C'est la partie modèle pour la récupération des informations dans la table Episode
+ *
  */
 class EpisodeTable extends Table {
 

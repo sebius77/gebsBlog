@@ -10,6 +10,9 @@ use Core\Entity\Entity;
  * @package App\Entity
  * Cette classe permet de générer sous forme d'objet
  * les commentaires
+ *
+ * Les getters sont généré automatiquement avec une fonction magique __get
+ *
  */
 class CommentaireEntity extends Entity {
 

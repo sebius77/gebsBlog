@@ -3,12 +3,26 @@
 namespace Core\Controller;
 
 
+/**
+ * Class Controller
+ * @package Core\Controller
+ * Classe parent des contrôleurs
+ *
+ */
+
 class Controller {
 
 
     protected $viewPath;
     protected $template;
 
+
+    /**
+     * @param $view
+     * @param array $variables
+     * Méthode permettant de transmettre des paramètres à la vue
+     * et d'afficher la vue
+     */
     public function render($view, $variables =[]) {
 
         ob_start();

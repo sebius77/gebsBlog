@@ -4,6 +4,10 @@ namespace App\Controller\Admin;
 
 use App;
 
+/**
+ * Class CommentairesController
+ * @package App\Controller\Admin
+ */
 class CommentairesController extends AppController {
 
     /**

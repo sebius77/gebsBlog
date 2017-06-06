@@ -6,6 +6,14 @@ namespace App\Controller\Admin;
 use Core\Auth\DBAuth;
 use \App;
 
+/**
+ * Class AppController
+ * @package App\Controller\Admin
+ *
+ * Classe permettant de tester si l'utilisateur
+ * à le droit d'accès à la partie administration
+ *
+ */
 class AppController extends \App\Controller\AppController {
 
     protected $template = 'layoutAdmin';

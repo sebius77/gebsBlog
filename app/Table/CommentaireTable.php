@@ -8,6 +8,7 @@ use App;
 /**
  * Class Commentaire
  * @package App\Table
+ * C'est la partie modèle pour la récupération des données des commentaires
  */
 class CommentaireTable extends Table{
 

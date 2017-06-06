@@ -5,7 +5,11 @@ namespace App\Controller;
 
 use App;
 
-
+/**
+ * Class EpisodeController
+ * @package App\Controller
+ * Controleur et méthodes pour les épisodes
+ */
 class EpisodeController extends AppController {
 
     /**
@@ -64,18 +68,24 @@ class EpisodeController extends AppController {
 
         //test si l'épisode existe
         $exist = App::getInstance()->getTable('episode')->find($_GET['id']);
+
+        // Si l'épisode n'existe pas, on est redirigé vers une page NotFound
         if($exist === false) {
             return App::getInstance()->notFoundFront();
         }
 
 
+        // Initialisation de la variable $success à null
         $success = null;
 
+        // Si $_POST existe (le formulaire est validé) et les champs ne sont pas vides.
+        // On vérifie la Regex
         if(isset($_POST) && !empty($_POST)) {
 
             $regexAuteur = "#^[a-zA-Z0-9][a-zA-Z0-9]{2,15}$#";
 
 
+            // Si la fonction preg_match renvoit true alors on remplit le tableau attribut
             if(preg_match($regexAuteur,$_POST['auteur'])) {
 
                 $attributes = [
@@ -86,6 +96,7 @@ class EpisodeController extends AppController {
                     'niveau' => $_POST['parent_level']
                 ];
 
+                // On ajoute le commentaire et on renvoit true
                 $add = App::getInstance()->getTable('commentaire')->add($attributes);
 
                 $success = true;
@@ -97,14 +108,18 @@ class EpisodeController extends AppController {
 
         }
 
+        // Pagination de la page épisode
 
-
+        // On récupère tous les épisodes par le id
         $episodesId = App::getInstance()->getTable('episode')->allEpisodeById();
+
+        // On crée un tableau et on ajoute tous les id des épisodes
         $tabId = [];
         foreach ($episodesId as $item) {
             $tabId[] = $item->id;
         }
 
+        // On compte le nombre d'épisodes
         $nbrEpisode = count($tabId);
 
         //renvoi l'index de l'épisode
@@ -121,14 +136,25 @@ class EpisodeController extends AppController {
             $prevEpisode = $tabId[$currentIndex];
         }
 
+        // On récupère l'épisode avec son id
         $episode = App::getInstance()->getTable('episode')->find($_GET['id']);
+
+        // On récupère les commentaires et leurs enfants avec l'id de l'épisode
         $commentaires = App::getInstance()->getTable('commentaire')->findAllChildren($_GET['id']);
 
 
-
+        // On instancie la classe pour les formulaires
         $form = new \Core\HTML\BootstrapForm();
-        $this->render('front.episode', compact('episode','nextEpisode', 'prevEpisode', 'commentaires', 'form', 'success'));
+
+        // On retourne la vue et tous ses paramètres
+        $this->render('front.episode', compact('episode',
+            'nextEpisode',
+            'prevEpisode',
+            'commentaires',
+            'form',
+            'success'));
     }
+
 
 
 

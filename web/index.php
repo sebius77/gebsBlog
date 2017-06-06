@@ -27,7 +27,7 @@ if (isset($_GET['page'])) {
 
 
 // En fonction de la demande utilisateur
-// On redirige sur la bonne méthode du controleur
+// On redirige sur le bon contrôleur et la bonne méthode
 if ($page === 'accueil') {
     $controller = new \App\Controller\EpisodeController();
     $controller->index();

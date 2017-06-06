@@ -5,6 +5,11 @@ namespace App\Entity;
 
 use Core\Entity\Entity;
 
+/**
+ * Class EpisodeEntity
+ * @package App\Entity
+ *
+ */
 class EpisodeEntity extends Entity {
 
     /**

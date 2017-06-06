@@ -4,6 +4,11 @@ namespace App\Controller\Admin;
 
 use App;
 
+
+/**
+ * Class EpisodeController
+ * @package App\Controller\Admin
+ */
 class EpisodeController extends AppController {
 
     /**
